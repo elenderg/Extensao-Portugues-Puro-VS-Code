@@ -1,0 +1,162 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "PoP",
+  "patterns": [
+    {  "include": "#arguments"     },
+    {  "include": "#constant"      },
+    {  "include": "#comment"       },
+    {  "include": "#entity"        },
+    {  "include": "#function"      },
+    {  "include": "#keyword"       },
+    {  "include": "#meta"          },
+    {  "include": "#numero"        },
+    {  "include": "#operadores"    },
+    {  "include": "#punctuation"   },
+    {  "include": "#strings"       },
+    {  "include": "#support"       },
+    {  "include": "#variable"      }
+  ],
+  "repository": {
+
+    "comment": {
+      "patterns": [
+        {
+          "match": "\\[.*?\\]",
+          "name": "comment.block.pop"
+        },
+        {
+          "match": "\\\\.*?$",
+          "name": "comment.line.character.pop"
+        }
+      ]
+    },
+    "constant": {
+      "patterns": [
+        {
+          "name": "constant.numeric.integer.decimal.pop",
+          "match": "\\b(-?[0-9]+)\\b"
+        },
+        {
+          "name": "constant.numeric.integer.hexadecimal.pop",
+          "match": "(\\$[a-fA-F0-9]+)"
+        },
+        {
+          "name": "constant.numeric.integer.float.decimal.pop",
+          "match": "\\b(-?[0-9]+\\-[0-9]+/[0-9]+)\\b"
+        },
+        {
+          "name": "constant.language.pop",
+          "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"
+        }
+      ]
+    },
+    "entity": {
+      "patterns": [
+        {
+          "name": "entity.name.struct.pop",
+          "match": "\\b(?i:(estrutura|estruturas|registro|registros|lista|listas))\\b"
+        },
+        {
+          "name": "entity.name.type.pop",
+          "match": "\\b(?i:(aba|aleatório|altura|ângulo|byte|bytes|brilho|caixa|caneta|canto|caractere|comprimento|contador|contagem|conteúdo|cor|coordenada|etiqueta|fileira|identificador|inferior|localização|luminosidade|matiz|menu|nibble|novo|número|página|ponto|ponteiro|primeiro|quarto|quociente|resto|restante|sinalizador|saturação|segunda|segundo|segundos|string|subtexto|superior|tamanho|tecla|terceiro|texto|unidade|valor|word|x1|x2|y1|y2))\\b"
+        }
+      ]
+    },
+    "function": {
+      "patterns": [
+        {
+          "name": "keyword.function.pop",
+          "match": "(Rotina para que se|Função para que se|para que se)"
+        },
+        {
+          "name": "entity.name.function.pop",
+          "match": "(?<= para que se )(\\w.*?)((?= \\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|\\:)\\b)|\\:)"
+        }
+      ]
+    },
+    "keyword": {
+      "patterns": [
+        {
+          "name": "keyword.control.pop",
+          "match": "(?i:(desde|referência|se))"
+        },
+        {
+          "name": "keyword.control.artigos.definidos.pop",
+          "match": "\\b(?i:(a|as|o|os))\\b"
+        },
+        {
+          "name": "keyword.control.artigos.indefinidos.pop",
+          "match": "\\b(?i:(um|uns|uma|umas))\\b"
+        },
+        {
+          "name": "keyword.control.adjetivos.pop",
+          "match": "\\b(?i:(inexistente|nulo|original|próximo|vazia|vazias|vazio|vazios))\\b"
+        },
+        {
+          "name": "keyword.control.preposicoes.pop",
+          "match": "\\b(?i:(após|até|cima|com|como|dentre|depois|em|embaixo|entre|para|por|sob|sobre|usando))\\b"
+        },
+        {
+          "name": "keyword.control.verbos.pop",
+          "match": "\\b(?i:(contendo|denominada|denominadas|denominado|denominados|diga|é|está|estão|estamos|estar|estiver|estiverem|foi|for|forem|itere|pare|poder|preserve|processe|puder|reitere|retornando|retorne|são|ser|serem|usando))\\b"
+        },
+        {
+          "name": "keyword.control.punctuation.accessor.pop",
+          "match": "\\b(?i:(à|às|ao|aos|dessa|dessas|desse|desses|desta|destas|deste|destes|dum|duma|dumas|duns|essa|essas|esse|esses|esta|estas|este|estes|na|nas|no|nos|num|numa|numas|nuns|pela|pelas|pelo|pelos))\\b"
+        },
+        {
+          "name": "keyword.control.adverbios.pop",
+          "match": "\\b(?i:(acima|abaixo|adiante|agora|ainda|ali|além|antes|apenas|assim|atrás|bem|cada|cerca de|certamente|certo|certos|certa|certas|conforme))\\b"
+        },
+        {
+          "name": "keyword.control.substantivos.pop",
+          "match": "\\b(?i:(baixo|cima|direita|direito|esquerda|esquerdo))\\b"
+        },
+        {
+          "name": "keyword.other.operadoresaritmeticos.pop",
+          "match": "\\b(?i:(dividido por|e|mais|menos|multiplicado por|nem|ou|vezes))\\b"
+        },
+        {
+          "name": "keyword.other.operadoresdecomparacao.pop",
+          "match": "\\b(?i:(igual a|maior do que|maior que|maior|mais|menor do que|menor que|menor))\\b"
+        },
+        {
+          "name": "keyword.other.operadoresdeconcatenacao.pop",
+          "match": "\\b(?i:(acompanhado de|junto com|seguido de))\\b"
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "match": "\\;|\\.|\\,|\\:",
+          "name": "keyword.punctuation.terminator.pop"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.pop",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.pop",
+              "match": "\"\"."
+            }
+          ]
+        }
+      ]
+    },
+    "variable": {
+      "patterns": [
+        {
+          "name": "variable.other.readwrite.pop",
+          "match": "   *([A-ZÀ-ß][a-zÀ-ÖØ-öø-ÿ]*)"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.escopo.portugues"
+}

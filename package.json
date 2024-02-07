@@ -1,0 +1,34 @@
+{
+  "name": "portugues-puro",
+  "displayName": "Português Puro",
+  "description": "Realçador de sintaxe para a Linguagem de Programação \"Português Puro\".",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "pop",
+        "aliases": [
+          "PoP",
+          "pop"
+        ],
+        "extensions": [
+          "pop"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "pop",
+        "scopeName": "source.escopo.portugues",
+        "path": "./syntaxes/pop.tmLanguage.json"
+      }
+    ]
+  }
+}
