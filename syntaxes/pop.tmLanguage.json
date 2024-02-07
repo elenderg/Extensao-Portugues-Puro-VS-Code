@@ -65,11 +65,11 @@
         },
         {
           "name": "entity.name.function.pop",
-          "match": "(?<= para que se )(\\w.*?)((?= \\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|\\:)\\b)|\\:)"
+          "match": "(?<= para que se )(\\w.*?)((?= \\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|\\:|;)\\b)|\\:|;)"
         },
         {
           "name": "variable.parameter.pop",
-          "match": "(?<=(um|uma|uns|umas|dessa|dessas|desse|desses|dum|duma|duns|dumas) )(\\w.*?)((?= (\\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\\:|\\.))"
+          "match": "(?<=(um|uma|uns|umas|dessa|dessas|desse|desses|dum|duma|duns|dumas) )(\\w.*?)((?= (\\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\\:|\\.|;))"
         }
       ]
     },
