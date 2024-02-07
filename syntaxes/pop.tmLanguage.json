@@ -14,7 +14,7 @@
     {  "include": "#punctuation"   },
     {  "include": "#strings"       },
     {  "include": "#support"       },
-    {  "include": "#variable"      }
+    {  "include": "#variable"      }    
   ],
   "repository": {
 
@@ -129,8 +129,8 @@
     "punctuation": {
       "patterns": [
         {
-          "match": "\\;|\\.|\\,|\\:",
-          "name": "keyword.punctuation.terminator.pop"
+          "name": "keyword.punctuation.terminator.pop",
+          "match": "\\;|\\.|\\,|\\:"          
         }
       ]
     },
@@ -146,6 +146,14 @@
               "match": "\"\"."
             }
           ]
+        }
+      ]
+    },
+    "support":{
+      "patterns":[
+        {
+          "name": "support.type.pop",
+          "match": "\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As)\\b) (\\w.*?) (?=(é|são))"          
         }
       ]
     },
