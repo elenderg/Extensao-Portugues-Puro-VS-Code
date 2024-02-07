@@ -55,10 +55,6 @@
         {
           "name": "entity.name.struct.pop",
           "match": "\\b(?i:(estrutura|estruturas|registro|registros|lista|listas))\\b"
-        },
-        {
-          "name": "entity.name.type.pop",
-          "match": "\\b(?i:(aba|aleatório|altura|ângulo|byte|bytes|brilho|caixa|caneta|canto|caractere|comprimento|contador|contagem|conteúdo|cor|coordenada|etiqueta|fileira|identificador|inferior|localização|luminosidade|matiz|menu|nibble|novo|número|página|ponto|ponteiro|primeiro|quarto|quociente|resto|restante|sinalizador|saturação|segunda|segundo|segundos|string|subtexto|superior|tamanho|tecla|terceiro|texto|unidade|valor|word|x1|x2|y1|y2))\\b"
         }
       ]
     },
@@ -71,6 +67,10 @@
         {
           "name": "entity.name.function.pop",
           "match": "(?<= para que se )(\\w.*?)((?= \\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|\\:)\\b)|\\:)"
+        },
+        {
+          "name": "variable.parameter.pop",
+          "match": "(?<=(um|uma|uns|umas|dessa|dessas|desse|desses|dum|duma|duns|dumas) )(\\w.*?)((?= (\\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\\:))"
         }
       ]
     },
@@ -81,11 +81,11 @@
           "match": "(?i:(desde|referência|se))"
         },
         {
-          "name": "keyword.control.artigos.definidos.pop",
+          "name": "keyword.language.artigos.definidos.pop",
           "match": "\\b(?i:(a|as|o|os))\\b"
         },
         {
-          "name": "keyword.control.artigos.indefinidos.pop",
+          "name": "keyword.language.artigos.indefinidos.pop",
           "match": "\\b(?i:(um|uns|uma|umas))\\b"
         },
         {
@@ -113,7 +113,7 @@
           "match": "\\b(?i:(baixo|cima|direita|direito|esquerda|esquerdo))\\b"
         },
         {
-          "name": "keyword.other.operadoresaritmeticos.pop",
+          "name": "keyword.control.operadoresaritmeticos.pop",
           "match": "\\b(?i:(dividido por|e|mais|menos|multiplicado por|nem|ou|vezes))\\b"
         },
         {
