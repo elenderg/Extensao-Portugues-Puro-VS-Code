@@ -152,7 +152,7 @@
       "patterns":[
         {
           "name": "support.type.pop",
-          "match": "\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As)\\b)\\s*([a-zA-Z0-9À-ÿ_\\-].*?)\\s*(?=(é|são))"
+          "match": "\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As)\\b)\\s*([a-zA-Z0-9À-ÿ_\\-].*?)\\s*(?=(\\b(é)\\b|\\b(são)\\b))"
         }
       ]
     }
