@@ -65,11 +65,11 @@
         },
         {
           "name": "entity.name.function.pop",
-          "match": "(?<=\\s*para\\s*que\\s*se\\s*)([a-zA-Z0-9À-ÿ_\\-].*?)((?=\\s*\\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|\\:|;)\\b)|\\:|;)"
+          "match": "(?<=\\s*para\\s*que\\s*se\\s*)([a-zA-Z0-9À-ÿ_\\-].*?)((?=\\s*\\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|em|num|numa|nuns|numas|para|por|um|uma|uns|umas|usando|\\:|;)\\b)|\\:|;)"
         },
         {
           "name": "variable.parameter.pop",
-          "match": "(?<=\\b(um|uma|uns|umas|dessa|dessas|desse|desses|dum|duma|duns|dumas)\\b\\s*)([a-zA-Z0-9À-ÿ_\\-].*?)(((?= (\\b(contendo|com|desde|dessa|dessas|desse|desses|denominada|denominadas|denominado|denominados|dum|duma|duns|dumas|igual|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\\:|\\.|;|\\())|(?=(\\:|;|\\()))"
+          "match": "(?<=\\b(um|uma|uns|umas|dessa|dessas|desse|desses|dum|duma|duns|dumas)\\b\\s*)([a-zA-Z0-9À-ÿ_\\-].*?)(((?= (\\b(contendo|com|desde|dessa|dessas|desse|desses|denominada|denominadas|denominado|denominados|dum|duma|duns|dumas|em|igual|num|numa|nuns|numas|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\\:|\\.|;|\\())|(?=(\\:|;|\\()))"
         }
       ]
     },
@@ -152,7 +152,7 @@
       "patterns":[
         {
           "name": "support.type.pop",
-          "match": "\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As)\\b)\\s*([a-zA-Z0-9À-ÿ_\\-].*?)\\s*(?=(\\b(é)\\b|\\b(são)\\b))"
+          "match": "(\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As)\\b)\\s*([a-zA-Z0-9À-ÿ_\\-\\s\/]*?)\\s*(?=(\\b(é)\\b|\\b(são)\\b|\\[)))|(\\b(?<=(\\]\\s)\\b)\\s*([a-zA-Z0-9À-ÿ_\\-\\s\/]*?)\\s*(?=(\\b(é)\\b|\\b(são)\\b)))"
         }
       ]
     }
