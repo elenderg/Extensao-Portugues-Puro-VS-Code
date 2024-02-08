@@ -61,15 +61,15 @@
       "patterns": [
         {
           "name": "keyword.function.pop",
-          "match": "[a-zA-Z0-9À-ÖØ-öø-ÿ_\\-]*\\s*para\\s*que\\s*se"
+          "match": "[a-zA-Z0-9À-ÿ_\\-]*\\s*para\\s*que\\s*se"
         },
         {
           "name": "entity.name.function.pop",
-          "match": "(?<=\\s*para\\s*que\\s*se\\s*)([a-zA-Z0-9À-ÖØ-öø-ÿ_\\-].*?)((?=\\s*\\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|\\:|;)\\b)|\\:|;)"
+          "match": "(?<=\\s*para\\s*que\\s*se\\s*)([a-zA-Z0-9À-ÿ_\\-].*?)((?=\\s*\\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|\\:|;)\\b)|\\:|;)"
         },
         {
           "name": "variable.parameter.pop",
-          "match": "(?<=(um|uma|uns|umas|dessa|dessas|desse|desses|dum|duma|duns|dumas) )([a-zA-Z0-9À-ÖØ-öø-ÿ_\\-].*?)(((?= (\\b(contendo|com|desde|dessa|dessas|desse|desses|denominada|denominadas|denominado|denominados|dum|duma|duns|dumas|igual|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\\:|\\.|;|\\())|(?=(\\:|;|\\()))"
+          "match": "(?<=(um|uma|uns|umas|dessa|dessas|desse|desses|dum|duma|duns|dumas) )([a-zA-Z0-9À-ÿ_\\-].*?)(((?= (\\b(contendo|com|desde|dessa|dessas|desse|desses|denominada|denominadas|denominado|denominados|dum|duma|duns|dumas|igual|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\\:|\\.|;|\\())|(?=(\\:|;|\\()))"
         }
       ]
     },
