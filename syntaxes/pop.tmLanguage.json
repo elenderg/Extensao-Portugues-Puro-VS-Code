@@ -61,7 +61,7 @@
       "patterns": [
         {
           "name": "keyword.function.pop",
-          "match": "(Rotina para que se|Função para que se|para que se)"
+          "match": "[a-zA-Z0-9À-ÖØ-öø-ÿ_\\-]* para que se"
         },
         {
           "name": "entity.name.function.pop",
@@ -69,7 +69,7 @@
         },
         {
           "name": "variable.parameter.pop",
-          "match": "(?<=(um|uma|uns|umas|dessa|dessas|desse|desses|dum|duma|duns|dumas) )(\\w.*?)(((?= (\\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\\:|\\.|;))|(?=(\\:|;)))"
+          "match": "(?<=(um|uma|uns|umas|dessa|dessas|desse|desses|dum|duma|duns|dumas) )(\\w.*?)(((?= (\\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\\:|\\.|;|\\())|(?=(\\:|;|\\()))"
         }
       ]
     },
@@ -81,11 +81,11 @@
         },
         {
           "name": "keyword.language.artigos.definidos.pop",
-          "match": "\\b(?i:(a|as|o|os))\\b"
+          "match": "\\b(A|As|O|Os)\\b"
         },
         {
           "name": "keyword.language.artigos.indefinidos.pop",
-          "match": "\\b(?i:(um|uns|uma|umas))\\b"
+          "match": "\\b(Um|Uns|Uma|Umas)\\b"
         },
         {
           "name": "keyword.control.adjetivos.pop",
