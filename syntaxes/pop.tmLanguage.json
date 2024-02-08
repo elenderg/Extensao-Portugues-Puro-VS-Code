@@ -61,11 +61,11 @@
       "patterns": [
         {
           "name": "keyword.function.pop",
-          "match": "[a-zA-Z0-9À-ÖØ-öø-ÿ_\\-]* para que se"
+          "match": "[a-zA-Z0-9À-ÖØ-öø-ÿ_\\-]*\\s*para\\s*que\\s*se"
         },
         {
           "name": "entity.name.function.pop",
-          "match": "(?<= para que se )([a-zA-Z0-9À-ÖØ-öø-ÿ_\\-].*?)((?= \\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|\\:|;)\\b)|\\:|;)"
+          "match": "(?<=\\s*para\\s*que\\s*se\\s*)([a-zA-Z0-9À-ÖØ-öø-ÿ_\\-].*?)((?=\\s*\\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|\\:|;)\\b)|\\:|;)"
         },
         {
           "name": "variable.parameter.pop",
@@ -152,32 +152,8 @@
       "patterns":[
         {
           "name": "support.type.pop",
-          "match": "\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As)\\b) ([a-zA-Z0-9À-ÖØ-öø-ÿ_\\-].*?) (?=(é|são))"
+          "match": "\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As)\\b)\\s*([a-zA-Z0-9À-ÿ_\\-].*?)\\s*(?=(é|são))"
         }
-      ]
-    },
-    "variable": {
-      "patterns": [
-        {
-          "name": "variable.other.readwrite.pop",
-          "match": "   *([A-ZÀ-ß][a-zÀ-ÖØ-öø-ÿ]*)"
-        },
-        {
-          "name": "struct.member.pop",
-          "begin": "\\b(estrutura com)\\b",
-          "end": "\\.",
-          "patterns": [
-            {
-              "match": "\\b(Um|Uns|Uma|Umas)\\b",
-              "name": "storage.type.member"
-            },
-            {
-              "match": "\\b([a-zA-Z0-9À-ÖØ-öø-ÿ_\\-]*)\\b",
-              "name": "variable.other.member"
-            }
-          ]
-        }
-        
       ]
     }
     
