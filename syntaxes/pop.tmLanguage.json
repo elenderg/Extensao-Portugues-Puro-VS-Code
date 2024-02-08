@@ -69,7 +69,7 @@
         },
         {
           "name": "variable.parameter.pop",
-          "match": "(?<=(um|uma|uns|umas|dessa|dessas|desse|desses|dum|duma|duns|dumas) )([a-zA-Z0-9À-ÖØ-öø-ÿ_\\-].*?)(((?= (\\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\\:|\\.|;|\\())|(?=(\\:|;|\\()))"
+          "match": "(?<=(um|uma|uns|umas|dessa|dessas|desse|desses|dum|duma|duns|dumas) )([a-zA-Z0-9À-ÖØ-öø-ÿ_\\-].*?)(((?= (\\b(contendo|com|desde|dessa|dessas|desse|desses|denominada|denominadas|denominado|denominados|dum|duma|duns|dumas|igual|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\\:|\\.|;|\\())|(?=(\\:|;|\\()))"
         }
       ]
     },
@@ -152,7 +152,7 @@
       "patterns":[
         {
           "name": "support.type.pop",
-          "match": "\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As)\\b) ([a-zA-Z0-9À-ÖØ-öø-ÿ_\\-].*?) (?=(é|são))"          
+          "match": "\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As)\\b) ([a-zA-Z0-9À-ÖØ-öø-ÿ_\\-].*?) (?=(é|são))"
         }
       ]
     },
@@ -161,9 +161,26 @@
         {
           "name": "variable.other.readwrite.pop",
           "match": "   *([A-ZÀ-ß][a-zÀ-ÖØ-öø-ÿ]*)"
+        },
+        {
+          "name": "struct.member.pop",
+          "begin": "\\b(estrutura com)\\b",
+          "end": "\\.",
+          "patterns": [
+            {
+              "match": "\\b(Um|Uns|Uma|Umas)\\b",
+              "name": "storage.type.member"
+            },
+            {
+              "match": "\\b([a-zA-Z0-9À-ÖØ-öø-ÿ_\\-]*)\\b",
+              "name": "variable.other.member"
+            }
+          ]
         }
+        
       ]
     }
+    
   },
   "scopeName": "source.escopo.portugues"
 }
