@@ -1,0 +1,89 @@
+---
+$schema: "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json"
+name: "PoP"
+patterns: 
+- include: "#arguments"
+- include: "#constant"
+- include: "#comment"
+- include: "#entity"
+- include: "#function"
+- include: "#keyword"
+- include: "#meta"
+- include: "#numero"
+- include: "#operadores"
+- include: "#punctuation"
+- include: "#strings"
+- include: "#support"
+- include: "#variable"
+repository: 
+  comment: 
+    patterns: 
+    - match: "\[.*?\]"
+      name: "comment.block.pop"
+    - match: "\\(.*)"
+      name: "comment.line.character.pop"
+  constant: 
+    patterns: 
+    - name: "constant.numeric.integer.decimal.pop"
+      match: "\b(-?[\d]+)\b"
+    - name: "constant.numeric.integer.hexadecimal.pop"
+      match: "(\$[a-fA-F\d]+)"
+    - name: "constant.numeric.integer.float.decimal.pop"
+      match: "\b(-?[\d]+\-[\d]+/[\d]+)\b"
+    - name: "constant.language.pop"
+      match: "\b(?i:(sim|não|nulo|inexistente|em branco))\b"
+  entity: 
+    patterns: 
+    - name: "entity.name.struct.pop"
+      match: "\b(?i:(estrutura|estruturas|registro|registros|lista|listas))\b"
+  function: 
+    patterns: 
+    - name: "keyword.function.pop"
+      match: "[\wÀ-ÿ_\-]*\s*para\s*que\s*se"
+    - name: "entity.name.function.pop"
+      match: "(?<=\s*para\s*que\s*se\s*)([\wÀ-ÿ_\-].*?)((?=\s*\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|em|num|numa|nuns|numas|para|por|um|uma|uns|umas|usando|\:|;)\b)|\:|;)"
+    - name: "variable.parameter.pop"
+      match: "(?<=\b(um|uma|uns|umas|dessa|dessas|desse|desses|dum|duma|duns|dumas)\b\s*)([\wÀ-ÿ_\-].*?)(((?= (\b(contendo|com|desde|dessa|dessas|desse|desses|denominada|denominadas|denominado|denominados|dum|duma|duns|dumas|em|igual|num|numa|nuns|numas|para|por|um|uma|uns|umas|usando|e|ou)\b)|\:|\.|;|\())|(?=(\:|;|\()))"
+  keyword: 
+    patterns: 
+    - name: "keyword.control.pop"
+      match: "\b(?i:(desde|referência|se))\b"
+    - name: "keyword.language.artigos.definidos.pop"
+      match: "\b(A|As|O|Os)\b"
+    - name: "keyword.language.artigos.indefinidos.pop"
+      match: "\b(Um|Uns|Uma|Umas)\b"
+    - name: "keyword.control.adjetivos.pop"
+      match: "\b(?i:(inexistente|nulo|original|próximo|vazia|vazias|vazio|vazios))\b"
+    - name: "keyword.control.preposicoes.pop"
+      match: "\b(?i:(após|até|cima|com|como|dentre|depois|em|embaixo|entre|para|por|sob|sobre|usando))\b"
+    - name: "keyword.control.verbos.pop"
+      match: "\b(?i:(contendo|denominada|denominadas|denominado|denominados|diga|é|está|estão|estamos|estar|estiver|estiverem|foi|for|forem|itere|pare|poder|preserve|processe|puder|reitere|retornando|retorne|são|ser|serem|usando))\b"
+    - name: "keyword.control.punctuation.accessor.pop"
+      match: "\b(?i:(à|às|ao|aos|dessa|dessas|desse|desses|desta|destas|deste|destes|dum|duma|dumas|duns|essa|essas|esse|esses|esta|estas|este|estes|na|nas|no|nos|num|numa|numas|nuns|pela|pelas|pelo|pelos))\b"
+    - name: "keyword.control.adverbios.pop"
+      match: "\b(?i:(acima|abaixo|adiante|agora|ainda|ali|além|antes|apenas|assim|atrás|bem|cada|cerca de|certamente|certo|certos|certa|certas|conforme))\b"
+    - name: "keyword.control.substantivos.pop"
+      match: "\b(?i:(baixo|cima|direita|direito|esquerda|esquerdo))\b"
+    - name: "keyword.control.operadoresaritmeticos.pop"
+      match: "\b(?i:(dividido por|e|mais|menos|multiplicado por|nem|ou|vezes))\b"
+    - name: "keyword.other.operadoresdecomparacao.pop"
+      match: "\b(?i:(igual a|maior do que|maior que|maior|mais|menor do que|menor que|menor))\b"
+    - name: "keyword.other.operadoresdeconcatenacao.pop"
+      match: "\b(?i:(acompanhado de|junto com|seguido de))\b"
+  punctuation: 
+    patterns: 
+    - name: "keyword.punctuation.terminator.pop"
+      match: "\;|\.|\,|\:"
+  strings: 
+    patterns: 
+    - name: "string.quoted.double.pop"
+      begin: """
+      end: """
+      patterns: 
+      - name: "constant.character.escape.pop"
+        match: """."
+  support: 
+    patterns: 
+    - name: "support.type.pop"
+      match: "((\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As))\b)\s*([\wÀ-ÿ_\-\s/]*)\s*(?=é|são|\[))|(?<=\]\s*)([\wÀ-ÿ_\-\s/]*)\s*(?=é|são|\[)"
+scopeName: "source.escopo.portugues"

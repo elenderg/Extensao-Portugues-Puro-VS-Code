@@ -30,5 +30,8 @@
         "path": "./syntaxes/pop.tmLanguage.json"
       }
     ]
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
   }
 }
