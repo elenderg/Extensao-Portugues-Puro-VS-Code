@@ -69,7 +69,7 @@
         },
         {
           "name": "variable.parameter.pop",
-          "match": "\\b(um|uma|uns|umas|dessa|dessas|desse|desses|dum|duma|duns|dumas)\\b\\s(\\w.*?)(((?= (\\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\\:|\\.|;))|(?=(\\:|;)))"
+          "match": "(?<=(um|uma|uns|umas|dessa|dessas|desse|desses|dum|duma|duns|dumas) )(\\w.*?)(((?= (\\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\\:|\\.|;))|(?=(\\:|;)))"
         }
       ]
     },
