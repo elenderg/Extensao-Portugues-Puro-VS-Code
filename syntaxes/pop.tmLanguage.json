@@ -77,7 +77,7 @@
       "patterns": [
         {
           "name": "keyword.control.pop",
-          "match": "\\b(?i:(desde|referência|se))\\b"
+          "match": "\\b(?i:(desde|se))\\b|\\(referência\\)"
         },
         {
           "name": "keyword.language.artigos.definidos.pop",
@@ -151,8 +151,20 @@
     "support":{
       "patterns":[
         {
-          "name": "support.type.pop",
-          "match": "((\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As))\\b)\\s+([\\wÀ-ÿ_\\-\\s\/]*)\\s*(?=é|são|\\[))(?!.*?(,|e|ou)\\s*$)|(?<=(\\]\\s*))([\\wÀ-ÿ_\\-\\s\/]*)\\s*(?=é|são|\\[)"
+          "name": "support.type.simples.pop",
+          "match": "(\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As))\\b)\\s+([\\wÀ-ÿ_\\-\\s\/]*)\\s*(?=é|são)"
+        },
+        {
+          "name": "support.type.aposcolchete.pop",
+          "match": "((?<=(\\])))\\s+([\\wÀ-ÿ_\\-\\s\/]*)\\s*(?=é|são)"
+        },
+        {
+          "name": "support.type.antesdecolchete.pop",
+          "match": "(\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As))\\b)\\s+([\\wÀ-ÿ_\\-\\s\/]*)\\s*(?=(\\[))(?=\\[.*\\b(é|são)\\b)"
+        },
+        {
+          "name": "support.type.entrecolchetes.pop",
+          "match": "(?<=(\\]))\\s*([\\wÀ-ÿ_\\-\\s\/]*)\\s*(?=\\[.*\\b(é|são)\\b)"
         }
       ]
     }
