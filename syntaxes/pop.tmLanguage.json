@@ -62,12 +62,24 @@
         },
         {
           "name": "variable.parameter.pop",
-          "match": "(?<=\\b(um|uma|uns|umas|dessa|dessas|desse|desses|dum|duma|duns|dumas)\\b\\s*)([\\wÀ-ÿ_\\-].*?)(((?= (\\b(contendo|com|desde|dessa|dessas|desse|desses|denominada|denominadas|denominado|denominados|dum|duma|duns|dumas|em|igual|num|numa|nuns|numas|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\\:|\\.|;|\\())|(?=(\\:|;|\\()))"
+          "match": "(?<=\\b(um|uma|uns|umas|dessa|dessas|desse|desses|dum|duma|duns|dumas)\\b\\s*)([\\wÀ-ÿ_\\-].*?)(((?= (\\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|em|igual|num|numa|nuns|numas|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\\:|\\.|;|\\())|(?=(\\:|;|\\()))"
+        },
+        {
+          "name": "variable.type.struct.pop",
+          "match": "(\\b(?<=(Um|Uma|Uns|Umas)\\b\\s+)([\\wÀ-ÿ_\\-].*?)(?=\\s+\\b(denominada|denominadas|denominado|denominados)\\b))"
+        },
+        {
+          "name": "markup.italic.pop",
+          "match": "\\b(denominada|denominadas|denominado|denominados)\\b"
         }
       ]
     },
     "keyword": {
-      "patterns": [
+      "patterns": [        
+        {
+          "name": "punctuation.definition.parameters.begin.pop",
+          "match": "\\b(a|as|o|os|um|uns|uma|umas)\\b"
+        },
         {
           "name": "keyword.control.pop",
           "match": "\\b(?i:(desde|se))\\b|\\(referência\\)"
