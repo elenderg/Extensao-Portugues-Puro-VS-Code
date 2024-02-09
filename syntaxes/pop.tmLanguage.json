@@ -49,14 +49,7 @@
         }
       ]
     },
-    "entity": {
-      "patterns": [
-        {
-          "name": "entity.name.struct.pop",
-          "match": "\\b(?i:(estrutura|estruturas|registro|registros|lista|listas))\\b"
-        }
-      ]
-    },
+
     "function": {
       "patterns": [
         {
@@ -152,7 +145,7 @@
       "patterns":[
         {
           "name": "support.type.simples.pop",
-          "match": "(\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As))\\b)\\s+([\\wÀ-ÿ_\\-\\s\/]*)\\s*(?=é|são)"
+          "match": "(\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As))\\b)\\s+([\\wÀ-ÿ_\\-\\s\/]*)\\s*(?=\\b(é|são)\\b)"
         },
         {
           "name": "support.type.aposcolchete.pop",
@@ -165,6 +158,10 @@
         {
           "name": "support.type.entrecolchetes.pop",
           "match": "(?<=(\\]))\\s*([\\wÀ-ÿ_\\-\\s\/]*)\\s*(?=\\[.*\\b(é|são)\\b)"
+        },
+        {
+          "name": "support.struct.pop",
+          "match": "(\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As))\\b)\\s+([\\wÀ-ÿ_\\-\\s\/]*)\\s*(?=\\b(é uma estrutura|lista)\\b)"
         }
       ]
     }
