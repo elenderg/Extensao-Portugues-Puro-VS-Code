@@ -53,7 +53,7 @@
     "function": {
       "patterns": [
         {
-          "name": "keyword.function.pop",
+          "name": "storage.type.function.pop",
           "match": "[\\wÀ-ÿ_\\-]*\\s*para\\s*que\\s*se"
         },
         {
