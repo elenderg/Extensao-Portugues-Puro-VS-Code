@@ -67,15 +67,15 @@
         },
         {
           "name": "entity.name.function.invocacao.pop",
-          "match": "(?!(\\b(O|A|Os|As|Um|Uma|Uns|Umas|Diga|Itere|Retorne|Reitere|Rotina|Se)\\b))[A-Z][a-zÀ-ÿ]*?\\s*[\\wÀ-ÿ ]*?((?=\\s(\\-|\\b(\\d+|o|a|os|as|contendo|com|deste|destes|desta|destas|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|estiver|estiverem|foi|for|forem|em|igual|num|numa|nuns|numas|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\"|\\.|\\,|;|\\()|(\\$[a-fA-F\\d]+))"
+          "match": "(?!(\\b(O|A|Os|As|Um|Uma|Uns|Umas|Diga|Itere|Retorne|Reitere|Rotina|Se)\\b))[A-Z][a-zÀ-ÿ]*?\\s*[\\wÀ-ÿ ]*?((?=\\s(\\-|\\b(\\d+|o|a|os|as|contendo|com|deste|destes|desta|destas|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|estiver|estiverem|foi|for|forem|em|igual|num|numa|nuns|numas|para|por|referente|um|uma|uns|umas|usando|e|ou)\\b)|\"|\\.|\\,|;|\\()|(\\$[a-fA-F\\d]+))"
         },
         {
           "name": "entity.name.function.struct.member.pop",
-          "match": "(?<=\\b(Um|Uma|Uns|Umas)\\b\\s+)(?:(?!(denominad[oa]s?)).)+?(?=\\s*(?:,|\\(|\\[|\\.|\\b(e|ou)\\b))"
+          "match": "(?<=\\b(Um|Uma|Uns|Umas|(denominad[oa]s?))\\b\\s+)(?:(?!(denominad[oa]s?)).)+?(?=\\s*(?:,|\\(|\\[|\\.|\\b(e|ou)\\b))"
         },
         {
           "name": "variable.parameter.pop",
-          "match": "(?<=\\b(à|às|a|ao|aos|as|o|os|um|uma|uns|umas|deste|destes|desta|destas|dessa|dessas|desse|desses|dum|duma|duns|dumas)\\b\\s*)([\\wÀ-ÿ_\\-].*?)(((?= (\\b(à|às|a|ao|aos|após|começa|começar|contendo|com|depois|desde|deste|destes|desta|destas|dessa|dessas|desse|desses|dum|duma|duns|dumas|em|é|está|estão|estamos|estar|estiver|estiverem|foi|for|forem|em|estiver|igual|junto|não|num|numa|nuns|numas|o|a|os|as|para|parece|parecer|por|possui|seguido|sob|sobre|tem|termina|terminar|tiver|um|uma|uns|umas|usando|e|ou)\\b)|\"|\\:|,|\\.|;|\\())|(?=(\\:|;|\\()))"
+          "match": "(?<=\\b(à|às|a|ao|aos|as|o|os|um|uma|uns|umas|deste|destes|desta|destas|dessa|dessas|desse|desses|dum|duma|duns|dumas)\\b\\s*)([\\wÀ-ÿ_\\-].*?)(((?= (\\b(à|às|a|ao|aos|após|começa|começar|contendo|com|(denominad[oa]s?)|depois|desde|deste|destes|desta|destas|dessa|dessas|desse|desses|dum|duma|duns|dumas|em|é|está|estão|estamos|estar|estiver|estiverem|foi|for|forem|em|estiver|igual|junto|não|num|numa|nuns|numas|o|a|os|as|para|parece|parecer|por|possui|referente|seguido|sob|sobre|tem|termina|terminar|tiver|um|uma|uns|umas|usando|e|ou)\\b)|\"|\\:|,|\\.|;|\\())|(?=(\\:|;|\\()))"
         },
         {
           "name": "variable.type.struct.pop",
@@ -97,7 +97,8 @@
         {
           "name": "string.other.parameters.begin.pop",
           "match": "\\b(a|as|o|os|um|uns|uma|umas)\\b"
-        },
+        },       
+
         {
           "name": "keyword.control.pop",
           "match": "\\b(?i:(desde|se))\\b|\\(referência\\)"
