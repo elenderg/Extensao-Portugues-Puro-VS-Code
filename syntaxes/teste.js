@@ -8,7 +8,7 @@ function fazalgo(arg1, param, arg2, Person){
       break;
       
     }
-    
+    if(exists.endsWith('a')){}
     Person.name = "";
 
 }
