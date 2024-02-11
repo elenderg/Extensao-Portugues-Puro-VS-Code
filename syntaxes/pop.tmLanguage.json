@@ -67,11 +67,11 @@
         },
         {
           "name": "entity.name.function.invocacao.pop",
-          "match": "(?!(\\b(O|A|Os|As|Um|Uma|Uns|Umas|Se|Retorne|Rotina|Itere|Reitere)\\b))[A-Z][a-zÀ-ÿ]*\\s*[\\wÀ-ÿ ]*?((?=\\s(\\b(o|a|os|as|contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|em|igual|num|numa|nuns|numas|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\"|\\.|\\,|;|\\()|(\\$[a-fA-F\\d]+))"
+          "match": "(?!(\\b(O|A|Os|As|Um|Uma|Uns|Umas|Diga|Itere|Retorne|Reitere|Rotina|Se)\\b))[A-Z][a-zÀ-ÿ]*?\\s*[\\wÀ-ÿ ]*?((?=\\s(\\b(o|a|os|as|contendo|com|deste|destes|desta|destas|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|em|igual|num|numa|nuns|numas|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\"|\\.|\\,|;|\\()|(\\$[a-fA-F\\d]+))"
         },
         {
           "name": "variable.parameter.pop",
-          "match": "(?<=\\b(o|a|os|as|um|uma|uns|umas|deste|destes|desta|destas|dessa|dessas|desse|desses|dum|duma|duns|dumas)\\b\\s*)([\\wÀ-ÿ_\\-].*?)(((?= (\\b(contendo|com|desde|deste|destes|desta|destas|dessa|dessas|desse|desses|dum|duma|duns|dumas|em|é|está|estão|estamos|estar|estiver|estiverem|foi|for|foremem|estiver|for|igual|não|num|numa|nuns|numas|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\"|\\:|,|\\.|;|\\())|(?=(\\:|;|\\()))"
+          "match": "(?<=\\b(o|a|os|as|um|uma|uns|umas|deste|destes|desta|destas|dessa|dessas|desse|desses|dum|duma|duns|dumas)\\b\\s*)([\\wÀ-ÿ_\\-].*?)(((?= (\\b(contendo|com|desde|deste|destes|desta|destas|dessa|dessas|desse|desses|dum|duma|duns|dumas|em|é|está|estão|estamos|estar|estiver|estiverem|foi|for|foremem|estiver|for|igual|não|num|numa|nuns|numas|o|a|os|as|para|por|um|uma|uns|umas|usando|e|ou)\\b)|\"|\\:|,|\\.|;|\\())|(?=(\\:|;|\\()))"
         },
         {
           "name": "variable.type.struct.pop",
