@@ -8,6 +8,7 @@ function fazalgo(arg1, param, arg2, Person){
       break;
       
     }
+    
     Person.name = "";
 
 }
