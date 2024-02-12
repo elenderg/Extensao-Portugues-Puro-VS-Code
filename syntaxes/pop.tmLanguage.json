@@ -75,7 +75,7 @@
         },
         {
           "name": "variable.parameter.pop",
-          "match": "(?<=\\b(à|às|a|ao|aos|as|o|os|um|uma|uns|umas|deste|destes|desta|destas|dessa|dessas|desse|desses|dum|duma|duns|dumas)\\b\\s*)([\\wÀ-ÿ_\\-].*?)(((?= (\\b(à|às|a|ao|aos|após|começa|começar|contendo|com|(denominad[oa]s?)|depois|desde|deste|destes|desta|destas|dessa|dessas|desse|desses|dum|duma|duns|dumas|em|é|está|estão|estamos|estar|estiver|estiverem|foi|for|forem|em|estiver|igual|junto|não|num|numa|nuns|numas|o|a|os|as|para|parece|parecer|por|possui|referente|seguido|sob|sobre|tem|termina|terminar|tiver|um|uma|uns|umas|usando|e|ou)\\b)|\"|\\:|,|\\.|;|\\())|(?=(\\:|;|\\()))"
+          "match": "(?<=\\b(à|às|a|ao|aos|as|o|os|um|uma|uns|umas|deste|destes|desta|destas|dessa|dessas|desse|desses|dum|duma|duns|dumas)\\b\\s*)([\\wÀ-ÿ_\\-].*?)(((?= (\\b(à|às|a|ao|aos|após|começa|começar|contendo|com|(denominad[oa]s?)|depois|dividido|desde|deste|destes|desta|destas|dessa|dessas|desse|desses|dum|duma|duns|dumas|em|é|está|estão|estamos|estar|estiver|estiverem|foi|for|forem|em|estiver|igual|junto|mais|menos|multiplicado|não|num|numa|nuns|numas|o|a|os|as|para|parece|parecer|pela|pelas|pelo|pelos|por|possui|referente|seguido|sob|sobre|tem|termina|terminar|tiver|um|uma|uns|umas|usando|vezes|e|ou)\\b)|\"|\\:|,|\\.|;|\\())|(?=(\\:|;|\\()))"
         },
         {
           "name": "variable.type.struct.pop",
@@ -137,7 +137,7 @@
         },
         {
           "name": "keyword.control.operadoresaritmeticos.pop",
-          "match": "\\b(?i:(dividido por|e|mais|menos|multiplicado por|nem|ou|vezes))\\b"
+          "match": "\\b(?i:(dividido|e|mais|menos|multiplicado|nem|ou|vezes))\\b"
         },
         {
           "name": "keyword.other.operadoresdecomparacao.pop",
