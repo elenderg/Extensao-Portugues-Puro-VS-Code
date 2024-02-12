@@ -63,11 +63,23 @@
         },
         {
           "name": "entity.name.function.declaracao.pop",
-          "match": "(?<=\\s*para\\s*que\\s*se\\s*)([\\wÀ-ÿ_\\-].*?)((?=\\s*\\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|em|num|numa|nuns|numas|para|por|um|uma|uns|umas|usando|\\:|;)\\b)|\\:|;)"
+          "begin": "(?<=\\s*para\\s*que\\s*se\\s*)",
+          "end": "(?=\\s*\\b(contendo|com|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|em|num|numa|nuns|numas|para|por|um|uma|uns|umas|usando|\\:|;)\\b)|\\:|;",
+          "captures": {
+            "1": {
+              "name": "entity.name.function.declaracao.pop"
+            }
+          }
         },
         {
           "name": "entity.name.function.invocacao.pop",
-          "match": "(?!(\\b(O|A|Os|As|Um|Uma|Uns|Umas|Diga|Itere|Retorne|Reitere|Rotina|Se)\\b))[A-Z][a-zÀ-ÿ]*?\\s*[\\wÀ-ÿ ]*?((?=\\s(\\-|\\b(\\d+|o|a|os|as|contendo|com|deste|destes|desta|destas|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|estiver|estiverem|foi|for|forem|em|igual|num|numa|nuns|numas|para|por|referente|um|uma|uns|umas|usando|e|ou)\\b)|\"|\\.|\\,|;|\\()|(\\$[a-fA-F\\d]+))"
+          "begin": "(?!(\\b(O|A|Os|As|Um|Uma|Uns|Umas|Diga|Itere|Retorne|Reitere|Rotina|Se)\\b))[A-Z][a-zÀ-ÿ]*?\\s*[\\wÀ-ÿ ]*?",
+          "end": "(?=\\s(\\-|\\b(\\d+|o|a|os|as|contendo|com|deste|destes|desta|destas|desde|dessa|dessas|desse|desses|dum|duma|duns|dumas|estiver|estiverem|foi|for|forem|em|igual|num|numa|nuns|numas|para|por|referente|um|uma|uns|umas|usando|e|ou)\\b)|\"|\\.|\\,|;|\\()|(\\$[a-fA-F\\d]+)",
+          "captures": {
+            "0": {
+              "name": "entity.name.function.invocacao.pop"
+            }
+          }
         },
         {
           "name": "entity.name.function.struct.member.pop",
@@ -75,7 +87,13 @@
         },
         {
           "name": "variable.parameter.pop",
-          "match": "(?<=\\b(à|às|a|ao|aos|as|o|os|um|uma|uns|umas|deste|destes|desta|destas|dessa|dessas|desse|desses|dum|duma|duns|dumas)\\b\\s*)([\\wÀ-ÿ_\\-].*?)(((?= (\\b(à|às|a|ao|aos|após|começa|começar|contendo|com|(denominad[oa]s?)|depois|dividido|desde|deste|destes|desta|destas|dessa|dessas|desse|desses|dum|duma|duns|dumas|em|é|está|estão|estamos|estar|estiver|estiverem|foi|for|forem|em|estiver|igual|junto|mais|menos|multiplicado|não|num|numa|nuns|numas|o|a|os|as|para|parece|parecer|pela|pelas|pelo|pelos|por|possui|referente|retornando|seguido|sob|sobre|tem|termina|terminar|tiver|um|uma|uns|umas|usando|vezes|e|ou)\\b)|\"|\\:|,|\\.|;|\\())|(?=(\\:|;|\\()))"
+          "begin": "(?<=\\b(à|às|a|ao|aos|as|o|os|um|uma|uns|umas|deste|destes|desta|destas|dessa|dessas|desse|desses|dum|duma|duns|dumas)\\b\\s*)([\\wÀ-ÿ_\\-].*?)",
+          "end": "(?=\\s*(?:\\b(à|às|a|ao|aos|após|começa|começar|contendo|com|(denominad[oa]s?)|depois|dividido|desde|deste|destes|desta|destas|dessa|dessas|desse|desses|dum|duma|duns|dumas|em|é|está|estão|estamos|estar|estiver|estiverem|foi|for|forem|em|estiver|igual|junto|mais|menos|multiplicado|não|num|numa|nuns|numas|o|a|os|as|para|parece|parecer|pela|pelas|pelo|pelos|por|possui|referente|retornando|seguido|sob|sobre|tem|termina|terminar|tiver|um|uma|uns|umas|usando|vezes|e|ou)\\b|\"|\\[|\\:|,|\\.|;|\\())|(?=(\\:|;|\\())",
+          "captures": {
+            "1": {
+              "name": "variable.parameter.pop"
+            }
+          }
         },
         {
           "name": "variable.type.struct.pop",
@@ -87,8 +105,15 @@
         },
         {
           "name": "entity.name.function.condicao.pop",
-          "match": "(?<=\\b(Se)\\b\\s+)(?!(\\b(o|a|os|as|um|uma|uns|umas)\\b))([\\wÀ-ÿ_\\- ]*)(?=,)"
+          "begin": "(?<=\\b(Se)\\b\\s+)(?!(\\b(o|a|os|as|um|uma|uns|umas)\\b))",
+          "end": "(?=,)",
+          "captures": {
+            "3": {
+              "name": "entity.name.function.condicao.pop"
+            }
+          }
         }
+        
 
       ]
     },
