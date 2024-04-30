@@ -207,7 +207,7 @@
         },
         {
           "name": "support.type.aposcolchete.pop",
-          "match": "((?<=(\\])))\\s+([\\wÀ-ÿ_\\-\\s\/]*)\\s*(?=é|são)"
+          "match": "((?<=(\\])))\\s+([\\wÀ-ÿ_\\-\\s\/]*)\\s*(?=\\b(é|são)\\b)"
         },
         {
           "name": "support.type.antesdecolchete.pop",
