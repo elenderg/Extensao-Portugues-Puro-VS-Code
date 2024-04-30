@@ -93,7 +93,7 @@
         },
         {
           "name": "entity.name.function.struct.member.pop",
-          "match": "(?<=\\b(Um|Uma|Uns|Umas|(denominad[oa]s?))\\b\\s+)(?:(?!(denominad[oa]s?)).)+?(?=\\s*(?:,|\\(|\\[|\\.|\\b(e|ou)\\b))"
+          "match": "(?<=\\b(Um|Uma|Uns|Umas|(denominad[oa]s?))\\b\\s+)(?:(?!(denominad[oa]s?)).)+?(?=\\s*(?:,|\\(|\\[|\\.|\\b(e|ou|sob)\\b))"
         },
         {
           "name": "variable.parameter.pop",
@@ -203,7 +203,7 @@
       "patterns":[
         {
           "name": "support.type.simples.pop",
-          "match": "(\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As))\\b)\\s+([\\wÀ-ÿ_\\-\\s\/]*)\\s*(?=\\b(é|são)\\b)"
+          "match": "(\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As))\\b)\\s+([\\wÀ-ÿ_\\-\\#\\s\/]*)\\s*(?=\\b(é|são)\\b)"
         },
         {
           "name": "support.type.aposcolchete.pop",
@@ -218,8 +218,8 @@
           "match": "(?<=(\\]))\\s*([\\wÀ-ÿ_\\-\\s\/]*)\\s*(?=\\[.*\\b(é|são)\\b)"
         },
         {
-          "name": "support.struct.pop",
-          "match": "(\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As))\\b)\\s+([\\wÀ-ÿ_\\-\\s\/]*)\\s*(?=\\b(é uma estrutura|lista)\\b)"
+          "name": "support.type.struct.pop",
+          "match": "(\\b(?<=(Um|Uma|Uns|Umas|O|A|Os|As))\\b)\\s+([\\wÀ-ÿ_\\-\\s\/]*)\\s*(?=\\b(é uma estrutura|é uma lista)\\b)"
         }
       ]
     }
