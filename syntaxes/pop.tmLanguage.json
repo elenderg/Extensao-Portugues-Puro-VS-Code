@@ -97,6 +97,10 @@
         {
           "name": "support.type.estrutura.pop",
           "match": "(?<=(é uma)\\s+)\\b(estrutura)\\b(?=\\s*\\[)"
+        },
+        {
+          "name": "support.type.estrutura_nomeada.pop",
+          "match": "(?<=(é um|é uma|é uns|é umas|são um|são umas|são uns|são umas)\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*\\b(com)\\b)"
         },        
         {
           "name": "support.type.primitive.singular.masculino.pop",
@@ -125,6 +129,10 @@
         {
           "name": "variable.other.readwrite.pop",
           "match": "(?<=\\b(Um|Uma|Uns|Umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[A-zÀ-ÿ_\\-\\#\/ ]*?(?=\\s*\\b(é|são)\\b)"
+        },
+        {
+          "name": "variable.other.structmember.pop",
+          "match": "(?<=\\b(denominado|denominada|denominados|denominadas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[A-zÀ-ÿ_\\-\\#\/ ]*?(?=\\s*(\\.|\\[|\\,|\\b(e|ou)\\b))"
         }
       ]
     }    
