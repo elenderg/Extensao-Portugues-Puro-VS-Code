@@ -79,7 +79,8 @@
           "match": "\\b(?i:(acompanhado de|junto com|seguido de))\\b"}
       ]
     },
-    "punctuation": {"patterns": [{"name": "keyword.punctuation.terminator.pop","match": "\\;|\\.|\\,|\\:"}]},"support":{
+    "punctuation": {"patterns": [{"name": "keyword.punctuation.terminator.pop","match": "\\;|\\.|\\,|\\:"}]},
+    "support":{
       "patterns":[
         {
           "name": "support.type.ponteiro.pop",
@@ -116,11 +117,17 @@
         {
           "name": "support.type.membro_de_estrutura.pop",
           "match": "(?<=\\b(Um|Uma|Uns|Umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*\\b(denominado|denominada|denominados|denominadas)\\b)"
-        }
-  
+        }  
       ]
-    }
-    
+    },
+    "meta":{
+      "patterns":[
+        {
+          "name": "variable.other.readwrite.pop",
+          "match": "(?<=\\b(Um|Uma|Uns|Umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[A-zÀ-ÿ_\\-\\#\/ ]*?(?=\\s*\\b(é|são)\\b)"
+        }
+      ]
+    }    
   },
   "scopeName": "source.escopo.portugues"
 }
