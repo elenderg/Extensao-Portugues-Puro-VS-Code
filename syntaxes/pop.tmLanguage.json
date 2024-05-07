@@ -84,56 +84,88 @@
       "patterns":[
         {
           "name": "support.type.ponteiro.pop",
-          "match": "(?<=(é um)\\s+)\\b(ponteiro)\\b(?=\\s*\\b(para)\\b)"
+          "match": "(?<=(é\\s+um)\\s+)\\b(ponteiro)\\b(?=\\s*\\b(para)\\b)"
         },
         {
           "name": "support.type.ponteiro.pop",
-          "match": "(?<=(é um)\\s+)\\b(ponteiro)\\b(?=\\s*\\[)"
+          "match": "(?<=(é\\s+um)\\s+)\\b(ponteiro)\\b(?=\\s*\\[)"
         },        
         {
-          "name": "support.type.estrutura.pop",
-          "match": "(?<=(é uma)\\s+)\\b(estrutura)\\b(?=\\s*\\b(com)\\b)"
+          "name": "support.type.estrutura1.pop",
+          "match": "(?<=(é\\s+uma)\\s+)\\b(estrutura)\\b(?=\\s*\\b(com)\\b)"
         },
         {
-          "name": "support.type.estrutura.pop",
-          "match": "(?<=(é uma)\\s+)\\b(estrutura)\\b(?=\\s*\\[)"
+          "name": "support.type.estrutura2.pop",
+          "match": "(?<=(é\\s+uma)\\s+)\\b(estrutura)\\b(?=\\s*\\b(com)\\b)"
+        },
+        {
+          "name": "support.type.estrutura3.pop",
+          "match": "(?<=(são\\s+um)\\s+)\\b(estrutura)\\b(?=\\s*\\b(com)\\b)"
+        },
+        {
+          "name": "support.type.estrutura4.pop",
+          "match": "(?<=(são\\s+uma)\\s+)\\b(estrutura)\\b(?=\\s*\\b(com)\\b)"
         },
         {
           "name": "support.type.estrutura_nomeada.pop",
-          "match": "(?<=(é um|é uma|é uns|é umas|são um|são umas|são uns|são umas)\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*\\b(com)\\b)"
+          "match": "(?<=(é\\s+um|é\\s+uma|é\\s+uns|é\\s+umas|são\\s+um|são\\s+umas|são\\s+uns|são\\s+umas)\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*\\b(com)\\b)"
         },        
         {
           "name": "support.type.primitive.singular.masculino.pop",
-          "match": "(?<=(é um|são um)\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.))"
+          "match": "(?<=(é\\s+um|são\\s+um)\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\[))"
         },
         {
           "name": "support.type.primitive.singular.feminino.pop",
-          "match": "(?<=(é uma|são uma)\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.))"
+          "match": "(?<=(é\\s+uma|são\\s+uma)\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\[))"
         },
         {
           "name": "support.type.plural.masculino.pop",
-          "match": "(?<=(é uns|são uns)\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.))"
+          "match": "(?<=(é\\s+uns|são\\s+uns)\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\[))"
         },
         {
           "name": "support.type.plural.feminino.pop",
-          "match": "(?<=(é umas|são umas)\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.))"
+          "match": "(?<=(é\\s+umas|são\\s+umas)\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\[))"
         },
         {
           "name": "support.type.membro_de_estrutura.pop",
           "match": "(?<=\\b(Um|Uma|Uns|Umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*\\b(denominado|denominada|denominados|denominadas)\\b)"
-        }  
+        },
+        {
+          "name": "support.type.membro_de_estrutura_nao_nomeado.pop",
+          "match": "(?<=\\d\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\[|\\,|\\b(e|ou)\\b))"
+        },
+        {
+          "name": "support.type.uniontype.pop",
+          "match": "(?<=\\b(Um|Uma|Uns|Umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*\\b(sob)\\b)"
+        },
+        {
+          "name": "support.type.ponteiro_para_um_tipo.pop",
+          "match": "(?<=\\b(para\\s+um|para\\s+uma|para\\s+uns|para\\s+umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\[|\\,|\\b(e|ou)\\b))"
+        },
+        {
+          "name": "support.type.generico.pop",
+          "match": "(?<=\\b(um|uma|uns|umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.))"
+        }
       ]
     },
     "meta":{
       "patterns":[
         {
-          "name": "variable.other.readwrite.pop",
+          "name": "support.type.simples.pop",
           "match": "(?<=\\b(Um|Uma|Uns|Umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[A-zÀ-ÿ_\\-\\#\/ ]*?(?=\\s*\\b(é|são)\\b)"
         },
         {
           "name": "variable.other.structmember.pop",
-          "match": "(?<=\\b(denominado|denominada|denominados|denominadas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[A-zÀ-ÿ_\\-\\#\/ ]*?(?=\\s*(\\.|\\[|\\,|\\b(e|ou)\\b))"
-        }
+          "match": "(?<=\\b(denominado|denominada|denominados|denominadas)\\b\\s+)[A-zÀ-ÿ_\\d\\-\\#\/]*?\\s*[A-zÀ-ÿ_\\d\\-\\#\/ ]*?(?=\\s*(\\.|\\[|\\,|\\(|\\b(e|ou|sob)\\b))"
+        },        
+        {
+          "name": "variable.other.unionmember.pop",
+          "match": "(?<=\\b(sob o|sob a|sob os|sob as)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\[|\\,|\\(|\\b(e|ou)\\b))"
+        },
+        {
+          "name": "support.type.structmember.simple.pop",
+          "match": "(?<=\\b(Um|Uma|Uns|Umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[A-zÀ-ÿ_\\-\\#\/ ]*?(?=\\s*(\\.|\\[|\\,|\\(|\\b(e|ou|sob|denominado|denominada|denominados|denominadas)\\b))"
+        }  
       ]
     }    
   },
