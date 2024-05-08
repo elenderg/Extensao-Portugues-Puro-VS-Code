@@ -145,6 +145,10 @@
         {
           "name": "support.type.generico.pop",
           "match": "(?<=\\b(um|uma|uns|umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.))"
+        },
+        {
+          "name": "support.type.global.pop",
+          "match": "(?<=\\b(é um|é uma|é uns|é umas|são um|são umas|são uns|são umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s+(igual a)\\s+)"
         }
       ]
     },
@@ -164,8 +168,17 @@
         },
         {
           "name": "support.type.structmember.simple.pop",
-          "match": "(?<=\\b(Um|Uma|Uns|Umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[A-zÀ-ÿ_\\-\\#\/ ]*?(?=\\s*(\\.|\\[|\\,|\\(|\\b(e|ou|sob|denominado|denominada|denominados|denominadas)\\b))"
-        }  
+          "match": "(?<=\\b(Um|Uma|Uns|Umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[A-zÀ-ÿ_\\d\\-\\#\/ ]*?(?=\\s*(\\.|\\[|\\,|\\(|\\b(e|ou|sob|denominado|denominada|denominados|denominadas)\\b))"
+        },
+        {
+          "name": "variable.other.constant.colchete.pop",
+          "match": "(?<=\\b(O|A|Os|As)\\b\\s+)[A-zÀ-ÿ_\\-\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\#\/]*?\\s*[A-zÀ-ÿ_\\'\\d\\&\\@\\ƒŠŒŽœžŸ£µ\\-\\#\/ ]*?(?=\\s+(\\[))"
+        },  
+        {
+          "name": "variable.other.constant.pop",
+          "match": "(?<=\\b(O|A|Os|As)\\b\\s+)[A-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*(é um|é uma|é uns|é umas|são um|são umas|são uns|são umas)\\s+)"
+        }
+        
       ]
     }    
   },
