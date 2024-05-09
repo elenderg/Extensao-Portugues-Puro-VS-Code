@@ -43,8 +43,9 @@
     },
     "function": {
       "patterns": [
-        {"name": "storage.type.function.Rotina.pop",
-          "match": "Rotina\\s*para\\s*que\\s*se"}
+        {"name": "storage.type.function.Rotina.pop","match": "Rotina\\s*para\\s*que\\s*se"},
+        {"name": "storage.type.function.Rotina.pop","match": "Função\\s*para\\s*que\\s*se"},
+        {"name": "storage.type.function.Rotina.pop","match": "determine\\s*se"}
       ]
     },
     "keyword": {
@@ -96,15 +97,15 @@
         },
         {
           "name": "support.type.estrutura2.pop",
-          "match": "(?<=(é\\s+uma)\\s+)\\b(estrutura)\\b(?=\\s*\\b(com)\\b)"
+          "match": "(?<=(é\\s+umas)\\s+)\\b(estruturas)\\b(?=\\s*\\b(com)\\b)"
         },
         {
           "name": "support.type.estrutura3.pop",
-          "match": "(?<=(são\\s+um)\\s+)\\b(estrutura)\\b(?=\\s*\\b(com)\\b)"
+          "match": "(?<=(são\\s+uma)\\s+)\\b(estrutura)\\b(?=\\s*\\b(com)\\b)"
         },
         {
           "name": "support.type.estrutura4.pop",
-          "match": "(?<=(são\\s+uma)\\s+)\\b(estrutura)\\b(?=\\s*\\b(com)\\b)"
+          "match": "(?<=(são\\s+umas)\\s+)\\b(estruturas)\\b(?=\\s*\\b(com)\\b)"
         },
         {
           "name": "support.type.estrutura_nomeada.pop",
@@ -144,7 +145,7 @@
         },
         {
           "name": "support.type.generico.pop",
-          "match": "(?<=\\b(um|uma|uns|umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.))"
+          "match": "(?<=\\b(um|uma|uns|umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\b(desde|sobre|usando|e|ou|para)\\b)\\s*)"
         },
         {
           "name": "support.type.global.pop",
@@ -177,6 +178,14 @@
         {
           "name": "variable.other.constant.pop",
           "match": "(?<=\\b(O|A|Os|As)\\b\\s+)[A-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*(é um|é uma|é uns|é umas|são um|são umas|são uns|são umas)\\s+)"
+        },
+        {
+          "name": "entity.name.function.withparameters.pop",
+          "match": "(?<=\\b(para que se)\\b\\s+)[A-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*\\b(um|uma|uns|umas|dum|duma|duns|dumas|para|em|usando|com|desde|duma|duns|dumas|por)\\b\\s+)"
+        },
+        {
+          "name": "entity.name.function.noparameters.pop",
+          "match": "(?<=\\b(para que se)\\b\\s+)[A-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*(\\:|\\;))"
         }
         
       ]
