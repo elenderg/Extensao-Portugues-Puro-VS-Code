@@ -65,7 +65,7 @@
         {"name": "keyword.control.preposicoes.pop",
           "match": "\\b(?i:(após|até|cima|com|como|dentre|depois|em|embaixo|entre|para|pela|pelas|pelo|pelos|por|sob|sobre|usando))\\b"},
         {"name": "keyword.control.verbos.pop",
-          "match": "\\b(?i:(contendo|denominada|denominadas|denominado|denominados|diga|é|está|estão|estamos|estar|estiver|estiverem|foi|for|forem|itere|pare|poder|preserve|processe|puder|reitere|retornando|retorne|são|ser|serem|usando))\\b"},
+          "match": "\\b(?i:(contendo|denominada|denominadas|denominado|denominados|diga|é|está|estão|estamos|estar|estiver|estiverem|foi|for|forem|itere|pare|poder|preserve|processe|pode|puder|reitere|retornando|retorne|são|ser|serem|usando))\\b"},
         {"name": "keyword.control.punctuation.accessor.pop",
           "match": "\\b(?i:(à|às|ao|aos|na|nas|no|nos|num|numa|numas|nuns|pela|pelas|pelo|pelos))\\b"},
         {"name": "keyword.control.adverbios.pop",
@@ -145,7 +145,7 @@
         },
         {
           "name": "support.type.generico.pop",
-          "match": "(?<=\\b(um|uma|uns|umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\b(desde|sobre|usando|e|ou|para)\\b)\\s*)"
+          "match": "(?<=\\b(um|uma|uns|umas)\\b\\s+)[A-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\b(desde|sobre|usando|e|ou|para|pode|ser|é|está|for|estiver)\\b)\\s*)"
         },
         {
           "name": "support.type.global.pop",
@@ -186,6 +186,10 @@
         {
           "name": "entity.name.function.noparameters.pop",
           "match": "(?<=\\b(para que se)\\b\\s+)[A-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*(\\:|\\;))"
+        },
+        {
+          "name": "entity.name.function.invocation.pop",
+          "match": "(?<=  )[A-ZÀ-ß][A-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*\\b(\\d|o|a|os|as|um|uma|uns|umas|dum|duma|duns|dumas|para|em|usando|com|desde|duma|duns|dumas|por)\\b\\s+)"
         }
         
       ]
