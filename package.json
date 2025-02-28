@@ -6,6 +6,9 @@
   "engines": {
     "vscode": "^1.85.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elenderg/Extensao-Portugues-Puro-VS-Code"},
   "categories": [
     "Programming Languages"
   ],
@@ -29,7 +32,7 @@
         "scopeName": "source.escopo.portugues",
         "path": "./syntaxes/pop.tmLanguage.json"
       }
-    ]
+    ]    
   },
   "devDependencies": {
     "js-yaml": "^4.1.0"

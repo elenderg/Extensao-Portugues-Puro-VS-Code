@@ -1,65 +1,34 @@
-# portugues-puro README
+# Destaque de sintaxe de programação "Português Puro" para o Visual Studio Code
 
-This is the README for your extension "portugues-puro". After writing up a brief description, we recommend including the following sections.
+<!--![Logotipo](logo.png)-->
 
-## Features
+## Descrição
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Esta extensão do Visual Studio Code fornece destaque de sintaxe para a linguagem de programação "Português Puro", permitindo que os usuários escrevam e editem código em Português Puro com facilidade diretamente no editor.
 
-For example if there is an image subfolder under your extension project workspace:
+<!--![<img src="Realce.png" width="500"/>](Realce.png)-->
+<!--![<img src="Realce2.png" width="500"/>](Realce2.png)-->
 
-\!\[feature X\]\(images/feature-x.png\)
+O Português Puro é uma linguagem específica de domínio projetada para facilitar a compreensão e a legibilidade, criada por [Elender Gallas](https://www.linkedin.com/in/elender/) e [Élisson Gallas](https://www.linkedin.com/in/elissongois/). Para obter mais informações sobre o Português Puro, visite o [site oficial do projeto](https://portugues-puro.gitbook.io/documentacao).
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Recursos
 
-## Requirements
+- Destaque de sintaxe para arquivos de idioma Português Puro *(.pop)*
+- Melhor legibilidade e clareza para código Português Puro no Visual Studio Code
+- Integração perfeita com outros recursos e extensões do VS Code
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Instalação
 
-## Extension Settings
+Você pode instalar o Realçador de Sintaxe para Português Puro diretamente do Visual Studio Code Marketplace ou pesquisando por "Português Puro" na seção "Extensões" (Ctrl+Shift+X).
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Uso
 
-For example:
+Depois de instalada, a extensão aplica automaticamente o destaque de sintaxe a todos os arquivos com as extensões listadas acima. Basta abrir um arquivo Português Puro no Visual Studio Code para ver o destaque de sintaxe em ação.
 
-This extension contributes the following settings:
+## Suporte e feedback
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+Para suporte ou feedback sobre esta extensão, entre em contato conosco [aqui](https://github.com/elenderg/Portugues-Puro/issues). Agradecemos sugestões, relatórios de bugs ou solicitações de recursos.
 
-## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
 
 ---
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**

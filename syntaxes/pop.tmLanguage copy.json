@@ -17,22 +17,11 @@
     {  "include": "#variable"      }
   ],
   "repository": {
-    "comment": {
-      
+    "comment": {      
       "patterns": [
-        {
-          "match": "(\\[.*?\\])",
-          "name": "comment.block.pop"
-        },
-        {
-          "match": "\\\\(.*)",
-          "name": "comment.line.character.pop"
-        },
-        {
-          "match": "(\\(.*?\\))",
-          "name": "comment.block.documentation.pop"
-        }
-
+        {"match": "(\\[.*?\\])","name": "comment.block.pop"},
+        {"match": "\\\\(.*)","name": "comment.line.character.pop"},
+        {"match": "(\\(.*?\\))","name": "comment.block.documentation.pop"}
       ]
     },
     "constant": {
