@@ -1,13 +1,13 @@
-# Destaque de sintaxe de programação "Português Puro" para o Visual Studio Code
+# Realçador de sintaxe para a Linguagem de programação "Português Puro" para o Visual Studio Code
 
-<!--![Logotipo](logo.png)-->
+[Logotipo](logo.jpeg)
 
 ## Descrição
 
 Esta extensão do Visual Studio Code fornece destaque de sintaxe para a linguagem de programação "Português Puro", permitindo que os usuários escrevam e editem código em Português Puro com facilidade diretamente no editor.
 
-<!--![<img src="Realce.png" width="500"/>](Realce.png)-->
-<!--![<img src="Realce2.png" width="500"/>](Realce2.png)-->
+[<img src="Realce.png" width="500"/>](Realce.png)
+[<img src="Realce2.png" width="500"/>](Realce2.png)
 
 O Português Puro é uma linguagem específica de domínio projetada para facilitar a compreensão e a legibilidade, criada por [Elender Gallas](https://www.linkedin.com/in/elender/) e [Élisson Gallas](https://www.linkedin.com/in/elissongois/). Para obter mais informações sobre o Português Puro, visite o [site oficial do projeto](https://portugues-puro.gitbook.io/documentacao).
 

@@ -3,6 +3,7 @@
   "displayName": "Português Puro",
   "description": "Realçador de sintaxe para a Linguagem de Programação \"Português Puro\".",
   "version": "0.0.1",
+  "publisher": "OsmosianOrderofPlainEnglishProgrammers",
   "engines": {
     "vscode": "^1.85.0"
   },
