@@ -9,7 +9,7 @@ Esta extensão do Visual Studio Code fornece destaque de sintaxe para a linguage
 [<img src="Realce.png" width="500"/>](Realce.png)
 [<img src="Realce2.png" width="500"/>](Realce2.png)
 
-O Português Puro é uma linguagem específica de domínio projetada para facilitar a compreensão e a legibilidade, criada por [Elender Gallas](https://www.linkedin.com/in/elender/) e [Élisson Gallas](https://www.linkedin.com/in/elissongois/). Para obter mais informações sobre o Português Puro, visite o [site oficial do projeto](https://portugues-puro.gitbook.io/documentacao).
+O Português Puro é uma [Linguagem de programação para propósitos diversos](https://pt.wikipedia.org/wiki/Linguagem_de_programa%C3%A7%C3%A3o_para_prop%C3%B3sitos_diversos) projetada para facilitar a compreensão e a legibilidade, criada por [Elender Gallas](https://www.linkedin.com/in/elender/) e [Élisson Gallas](https://www.linkedin.com/in/elissongois/). Para obter mais informações sobre o Português Puro, visite o [site oficial do projeto](https://portugues-puro.gitbook.io/documentacao).
 
 ## Recursos
 
