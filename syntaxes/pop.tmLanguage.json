@@ -127,8 +127,20 @@
       },
       "patterns": [
         {
+          "name": "constant.numeric.integer.decimal.pop",
+          "match": "\\b(-?[\\d]+)\\b"
+        },
+        {
           "name": "constant.numeric.integer.hexadecimal.pop",
-          "match": "\\$[a-fA-F\\d]+"
+          "match": "(\\$[a-fA-F\\d]+)"
+        },
+        {
+          "name": "constant.numeric.integer.float.decimal.pop",
+          "match": "\\b(-?[\\d]+\\-[\\d]+/[\\d]+)\\b"
+        },
+        {
+          "name": "constant.language.pop",
+          "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"
         },
         {
           "name": "comment.block.pop",
