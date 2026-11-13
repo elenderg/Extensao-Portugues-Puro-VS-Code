@@ -1,240 +1,155 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "PoP",
+  "scopeName": "source.escopo.portugues",
   "patterns": [
-    {  "include": "#arguments"     },
-    {  "include": "#constant"      },
-    {  "include": "#comment"       },
-    {  "include": "#entity"        },
-    {  "include": "#function"      },
-    {  "include": "#keyword"       },
-    {  "include": "#meta"          },
-    {  "include": "#numero"        },
-    {  "include": "#operadores"    },
-    {  "include": "#punctuation"   },
-    {  "include": "#strings"       },
-    {  "include": "#support"       },
-    {  "include": "#variable"      }
+    {
+      "include": "#comentários"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#constant"
+    },
+    {
+      "include": "#function"
+    },
+    {
+      "include": "#tipos"
+    },
+    {
+      "include": "#variáveis"
+    }
   ],
   "repository": {
-    "comment": {
+    "comentários": {
       "patterns": [
-        {"match": "(\\[.*?\\])","name": "comment.block.pop"},
-        {"match": "\\\\(.*)","name": "comment.line.character.pop"},
-        {"match": "(\\(.*?\\))","name": "comment.block.documentation.pop"}
-      ]
-    },
-    "strings": {
-      "patterns": [
-        {"name": "string.quoted.double.pop","begin": "\"","end": "\""}
+        {
+          "match": "(\\[.*?\\])",
+          "name": "comment.bloco.pop"
+        },
+        {
+          "match": "\\\\(.*)",
+          "name": "comment.linha.pop"
+        },
+        {
+          "match": "(\\(.*?\\))",
+          "name": "comment.qualificador.pop"
+        }
       ]
     },
     "constant": {
       "patterns": [
-        {"name": "constant.numeric.integer.decimal.pop",
-          "match": "\\b(-?[\\d]+)\\b"},
-        {"name": "constant.numeric.integer.hexadecimal.pop",
-          "match": "(\\$[a-fA-F\\d]+)"},
-        {"name": "constant.numeric.integer.float.decimal.pop",
-          "match": "\\b(-?[\\d]+\\-[\\d]+/[\\d]+)\\b"},
-        {"name": "constant.language.pop",
-          "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"}
+        {
+          "name": "constant.numeric.integer.decimal.pop",
+          "match": "\\b(-?[\\d]+)\\b"
+        },
+        {
+          "name": "constant.numeric.integer.hexadecimal.pop",
+          "match": "(\\$[a-fA-F\\d]+)"
+        },
+        {
+          "name": "constant.numeric.integer.float.decimal.pop",
+          "match": "\\b(-?[\\d]+\\-[\\d]+/[\\d]+)\\b"
+        },
+        {
+          "name": "constant.language.pop",
+          "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"
+        }
       ]
     },
     "function": {
       "patterns": [
-        {"name": "storage.type.function.Rotina.pop","match": "Rotina\\s*para\\s*que\\s*se"},
-        {"name": "storage.type.function.Rotina.pop","match": "Função\\s*para\\s*que\\s*se"},
-        {"name": "storage.type.function.Rotina.pop","match": "determine\\s*se"}
-      ]
-    },
-    "keyword": {
-      "patterns": [
-        {"name": "keyword.language.artigos.definidos.pop",
-          "match": "\\b(A|As|O|Os)\\b"},
-        {"name": "keyword.language.artigos.indefinidos.pop",
-          "match": "\\b(Um|Uns|Uma|Umas)\\b"},
-        {"name": "variable.language.this.pop",
-          "match": "\\b(?i:(deste|desta|destes|destas|dessa|dessas|desse|desses|dum|duma|dumas|duns|essa|essas|esse|esses|esta|estas|este|estes))\\b"},
-        {"name": "string.other.parameters.begin.pop",
-          "match": "\\b(a|as|o|os|um|uns|uma|umas)\\b"},
-        {"name": "keyword.control.pop",
-          "match": "\\b(?i:(desde|se))\\b|\\(referência\\)"},
-        {"name": "keyword.control.adjetivos.pop",
-          "match": "\\b(?i:(ativo|ativado|desativado|desligado|inativo|inativado|inexistente|ligado|nulo|original|próximo|vazia|vazias|vazio|vazios))\\b"},
-        {"name": "keyword.control.preposicoes.pop",
-          "match": "\\b(?i:(após|até|cima|com|como|dentre|depois|em|embaixo|entre|para|pela|pelas|pelo|pelos|por|sob|sobre|usando))\\b"},
-        {"name": "keyword.control.verbos.pop",
-          "match": "\\b(?i:(contendo|denominada|denominadas|denominado|denominados|diga|é|está|estão|estamos|estar|estiver|estiverem|existe|foi|for|forem|há|itere|pare|poder|preserve|processe|pode|puder|reitere|retornando|retorne|são|ser|serem|usando))\\b"},
-        {"name": "keyword.control.punctuation.accessor.pop",
-          "match": "\\b(?i:(à|às|ao|aos|na|nas|no|nos|num|numa|numas|nuns|pela|pelas|pelo|pelos))\\b"},
-        {"name": "keyword.control.adverbios.pop",
-          "match": "\\b(?i:(acima|abaixo|adiante|agora|ainda|ali|além|antes|apenas|assim|atrás|bem|cada|cerca de|certamente|certo|certos|certa|certas|conforme))\\b"},
-        {"name": "keyword.control.substantivos.pop",
-          "match": "\\b(?i:(baixo|cima|direita|direito|esquerda|esquerdo))\\b"},
-        {"name": "keyword.control.operadoresaritmeticos.pop",
-          "match": "\\b(?i:(dividido|e|mais|menos|multiplicado|nem|ou|vezes))\\b"},
-        {"name": "keyword.other.operadoresdecomparacao.pop",
-          "match": "\\b(?i:(igual a|maior do que|maior que|maior|mais|menor do que|menor que|menor|igual))\\b"},
-        {"name": "keyword.other.operadoresdeconcatenacao.pop",
-          "match": "\\b(?i:(acompanhado de|junto com|seguido de))\\b"}
-      ]
-    },
-    "punctuation": {"patterns": [{"name": "keyword.punctuation.terminator.pop","match": "\\;|\\.|\\,|\\:"}]},
-    "support":{
-      "patterns":[
         {
-          "name": "support.type.ponteiro.pop",
-          "match": "(?<=(é\\s+um)\\s+)\\b(ponteiro)\\b(?=\\s*\\b(para)\\b)"
+          "name": "storage.type.function.Rotina.pop",
+          "match": "Rotina\\s*para\\s*que\\s*se"
         },
         {
-          "name": "support.type.ponteiro.pop",
-          "match": "(?<=(é\\s+um)\\s+)\\b(ponteiro)\\b(?=\\s*\\[)"
-        },        
-        {
-          "name": "support.type.estrutura1.pop",
-          "match": "(?<=(é\\s+uma)\\s+)\\b(estrutura)\\b(?=\\s*\\b(com)\\b)"
+          "name": "storage.type.function.Rotina.pop",
+          "match": "Função\\s*para\\s*que\\s*se"
         },
         {
-          "name": "support.type.estrutura2.pop",
-          "match": "(?<=(é\\s+umas)\\s+)\\b(estruturas)\\b(?=\\s*\\b(com)\\b)"
-        },
-        {
-          "name": "support.type.estrutura3.pop",
-          "match": "(?<=(são\\s+uma)\\s+)\\b(estrutura)\\b(?=\\s*\\b(com)\\b)"
-        },
-        {
-          "name": "support.type.estrutura4.pop",
-          "match": "(?<=(são\\s+umas)\\s+)\\b(estruturas)\\b(?=\\s*\\b(com)\\b)"
-        },
-        {
-          "name": "support.type.estrutura_nomeada.pop",
-          "match": "(?<=(é\\s+um|é\\s+uma|é\\s+uns|é\\s+umas|são\\s+um|são\\s+umas|são\\s+uns|são\\s+umas)\\s+)[A-Za-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*\\b(com)\\b)"
-        },
-        {
-          "name": "support.type.primitive.singular.masculino.pop",
-          "match": "(?<=(é\\s+um|são\\s+um)\\s+)[A-Za-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\[))"
-        },
-        {
-          "name": "support.type.primitive.singular.feminino.pop",
-          "match": "(?<=(é\\s+uma|são\\s+uma)\\s+)[A-Za-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\[))"
-        },
-        {
-          "name": "support.type.plural.masculino.pop",
-          "match": "(?<=(é\\s+uns|são\\s+uns)\\s+)[A-Za-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\[))"
-        },
-        {
-          "name": "support.type.plural.feminino.pop",
-          "match": "(?<=(é\\s+umas|são\\s+umas)\\s+)[A-Za-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\[))"
-        },
-        {
-          "name": "support.type.membro_de_estrutura.pop",
-          "match": "(?<=\\b(Um|Uma|Uns|Umas)\\b\\s+)[A-Za-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*\\b(denominado|denominada|denominados|denominadas)\\b)"
-        },
-    
-        {
-          "name": "support.type.membro_de_estrutura_nao_nomeado.pop",
-          "match": "(?<=\\d\\s+)[A-Za-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\[|\\,|\\b(e|ou|por|para|em|sobre|usando|com|como|for|é|estiver|está)\\b))"
-        },
-        {
-          "name": "support.type.uniontype.pop",
-          "match": "(?<=\\b(Um|Uma|Uns|Umas)\\b\\s+)[A-Za-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*\\b(sob)\\b)"
-        },
-        {
-          "name": "support.type.ponteiro_para_um_tipo.pop",
-          "match": "(?<=\\b(para\\s+um|para\\s+uma|para\\s+uns|para\\s+umas)\\b\\s+)[A-Za-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\[|\\,|\\b(e|ou)\\b))"
-        },
-        {
-          "name": "support.type.generico.pop",
-          "match": "(?<=\\b(um|uma|uns|umas)\\b\\s+)[A-Za-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\;|\\:|\\b(um|uma|uns|umas|desde|em|por|sobre|usando|e|ou|para|pode|ser|é|está|for|estiver)\\b)\\s*)"
-        },
-        {
-          "name": "support.type.global.pop",
-          "match": "(?<=\\b(é um|é uma|é uns|é umas|são um|são umas|são uns|são umas)\\b\\s+)[A-Za-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s+(igual a)\\s+)"
+          "name": "storage.type.function.Rotina.pop",
+          "match": "determine\\s*se"
         }
       ]
     },
-    "meta":{
-      "patterns":[
+    "tipos": {
+      "name": "meta.type.declaration.simple.pop",
+      "begin": "(?i)\\b(dessa|dessas|desse|desses|dum|duma|dumas|duns|essa|essas|esse|esses|nessa|nessas|nesse|nesses|nos|num|numa|numas|nuns|um|uma|umas|uns)\\b(?=\\s)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.language.iniciadores.pop"
+        }
+      },
+      "end": "(?i)(\\b(abaixo|acerca|acima|acompanhado|ainda|algum|ante|antes|aproximadamente|após|através|até|bastante|cabe|cerca|com|começa|começando|começar|como|comprida|comprido|contendo|conter|contiver|contém|contêm|couber|dada|dadas|dado|dados|dando|debaixo|dentre|dentro|depois|desde|deve|devem|deveras|deveria|deveriam|dividido|durante|e|em|enquanto|entre|então|estamos|estar|estarem|estará|estarão|estava|estavam|estiver|estiverem|está|estão|excede|excedem|existe|existem|existir|finaliza|finalizar|foi|for|foram|forem|houver|há|igual|inicia|iniciar|invoque|juntamente|junto|já|limitando-o|mais|menores|menos|multiplicado|necessita|necessitar|negativamente|negativo|nem|não|obtendo|ou|para|parece|parecida|parecido|partindo|partir|perante|perto|pior|pode|podem|podemos|poderia|por|possuem|possui|possuir|pouco|puder|puderem|qual|quanto|quão|regressivamente|relativa|requer|resultando|retornando|seguida|seguido|seja|sejam|sem|semelhante|ser|será|serão|similar|sob|sobre|somente|supera|superam|superar|são|só|tal|tanto|tem|ter|termina|terminar|tiver|tão|têm|ultrapassou|usando|versus|vezes|via|voltada|voltado|é|ao|aos|chamada|chamadas|chamado|chamados|denominada|denominadas|denominado|denominados|dessa|dessas|desse|desses|desta|destas|deste|destes|dum|duma|dumas|duns|na|nas|nessa|nessas|nesse|nesses|nesta|nestas|neste|nestes|no|nos|num|numa|numas|nuns|pela|pelas|pelo|pelos|à|às)\\b)|\\\\|\\:|\\(|\\.|\\,|\\;|(de (essa|essas|esse|esses|um|uma|umas|uns))",
+      "endCaptures": {
+        "1": {
+          "name": "keyword.operator.declaration.pop"
+        }
+      },
+      "patterns": [
+        {
+          "name": "comment.block.pop",
+          "begin": "\\[",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.begin.pop"
+            }
+          },
+          "end": "\\]",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.end.pop"
+            }
+          }
+        },
         {
           "name": "support.type.simples.pop",
-          "match": "(?<=\\b(Um|Uma|Uns|Umas)\\b\\s+)[A-Za-zÀ-ÿ_\\-\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\-\\#\/ ]*?(?=\\s*\\b(é|são)\\b)"
+          "match": "[A-Za-zÀ-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#\\/]+"
+        }
+      ]
+    },
+    "variáveis": {
+      "name": "meta.type.declaration.simple.pop",
+      "begin": "(?i)\\b(a|ao|aos|as|à|às|chamada|chamadas|chamado|chamados|denominada|denominadas|denominado|denominados|desta|destas|deste|destes|esta|estas|este|estes|na|nas|nesta|nestas|neste|nestes|no|nos|o|os|pela|pelas|pelo|pelos)\\b(?=\\s)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.language.iniciadores.pop"
+        }
+      },
+      "end": "(?i)(\\b(abaixo|acerca|acima|acompanhado|ainda|algum|ante|antes|aproximadamente|após|através|até|bastante|cabe|cerca|com|começa|começando|começar|como|comprida|comprido|contendo|conter|contiver|contém|contêm|couber|dada|dadas|dado|dados|dando|debaixo|dentre|dentro|depois|desde|deve|devem|deveras|deveria|deveriam|dividido|durante|e|em|enquanto|entre|então|estamos|estar|estarem|estará|estarão|estava|estavam|estiver|estiverem|está|estão|excede|excedem|existe|existem|existir|finaliza|finalizar|foi|for|foram|forem|houver|há|igual|inicia|iniciar|invoque|juntamente|junto|já|limitando-o|mais|menores|menos|multiplicado|necessita|necessitar|negativamente|negativo|nem|não|obtendo|ou|para|parece|parecida|parecido|partindo|partir|perante|perto|pior|pode|podem|podemos|poderia|por|possuem|possui|possuir|pouco|puder|puderem|qual|quanto|quão|regressivamente|relativa|requer|resultando|retornando|seguida|seguido|seja|sejam|sem|semelhante|ser|será|serão|similar|sob|sobre|somente|supera|superam|superar|são|só|tal|tanto|tem|ter|termina|terminar|tiver|tão|têm|ultrapassou|usando|versus|vezes|via|voltada|voltado|é|ao|aos|chamada|chamadas|chamado|chamados|denominada|denominadas|denominado|denominados|dessa|dessas|desse|desses|desta|destas|deste|destes|dum|duma|dumas|duns|na|nas|nessa|nessas|nesse|nesses|nesta|nestas|neste|nestes|no|nos|num|numa|numas|nuns|pela|pelas|pelo|pelos|à|às)\\b)|\\\\|\\:|\\(|\\.|\\,|\\;|(de (essa|essas|esse|esses|um|uma|umas|uns))",
+      "endCaptures": {
+        "1": {
+          "name": "keyword.operator.declaration.pop"
+        }
+      },
+      "patterns": [
+        {
+          "name": "constant.numeric.integer.hexadecimal.pop",
+          "match": "\\$[a-fA-F\\d]+"
         },
         {
-          "name": "variable.other.structmember.pop",
-          "match": "(?<=\\b(denominado|denominada|denominados|denominadas)\\b\\s+)[A-Za-zÀ-ÿ_\\d\\-\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\d\\-\\#\/ ]*?(?=\\s*(\\.|\\[|\\,|\\(|\\b(e|ou|sob)\\b))"
-        },        
-        {
-          "name": "variable.other.unionmember.pop",
-          "match": "(?<=\\b(sob o|sob a|sob os|sob as)\\b\\s+)[A-Za-zÀ-ÿ_\\-\\#\/]*?\\s*[\\wÀ-ÿ ]*?(?=\\s*(\\.|\\[|\\,|\\(|\\b(e|ou)\\b))"
+          "name": "comment.block.pop",
+          "begin": "\\[",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.begin.pop"
+            }
+          },
+          "end": "\\]",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.end.pop"
+            }
+          }
         },
-        {
-          "name": "support.type.structmember.simple.pop",
-          "match": "(?<=\\b(Um|Uma|Uns|Umas)\\b\\s+)[A-Za-zÀ-ÿ_\\-\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\d\\-\\#\/ ]*?(?=\\s*(\\.|\\[|\\,|\\(|\\b(e|ou|sob|denominado|denominada|denominados|denominadas)\\b))"
-        },
-        
-        {
-          "name": "variable.other.readwrite.estrutura.pop",
-          "match": "(?<=\\b(O|A|Os|As)\\b\\s+)[A-Za-zÀ-ÿ_\\-\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\'\\d\\&\\@\\ƒŠŒŽœžŸ£µ\\-\\#\/ ]*?(?=\\s*(deste|desta|destes|destas|dum|duma|duns|dumas)\\s+)"
-        },  
         {
           "name": "variable.other.constant.pop",
-          "match": "(?<=\\b(O|A|Os|As)\\b\\s+)[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*(é um|é uma|é uns|é umas|são um|são umas|são uns|são umas)\\s+)"
-        },
-        {
-          "name": "entity.name.function.withparameters.pop",
-          "match": "(?<=\\b(para que se)\\b\\s+)[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*\\b(um|uma|uns|umas|dum|duma|duns|dumas|para|em|usando|com|desde|duma|duns|dumas|por)\\b\\s+)"
-        },
-        {
-          "name": "entity.name.function.noparameters.pop",
-          "match": "(?<=\\b(para que se)\\b\\s+)[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*(\\:|\\;))"
-        },
-        {
-          "name": "entity.name.function.invocation.pop",
-          "match": "(?<=  )[A-ZÀ-ß][A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*\\b(\\d|o|a|os|as|à|às|ao|aos|um|uma|uns|umas|dum|duma|duns|dumas|para|em|usando|com|desde|por|deste|desta|destes|destas)\\b\\s+)"
-        },
-        {
-          "name": "entity.name.function.invocation.string_literal.pop",
-          "match": "(?<= )[A-ZÀ-ß][A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*\")"
-        },
-        {
-          "name": "entity.name.function.invocation.numero_literal.pop",
-          "match": "(?<= )[A-ZÀ-ß][A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*\\d)"
-        },
-        {
-          "name": "entity.name.function.invocation.hexadecimal_literal.pop",
-          "match": "(?<= )[A-ZÀ-ß][A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*\\$)"
-        },
-        {
-          "name": "entity.name.function.invocation.postcomma.pop",
-          "match": "(?<=, )[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#]*?\\s*[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\# ]*?(?=\\s*\\b(\\d|o|a|os|as|à|às|ao|aos|um|uma|uns|umas|dum|duma|duns|dumas|para|em|usando|com|desde|por|deste|desta|destes|destas)\\b\\s+)"
-        },
-        {
-          "name": "entity.name.function.invocation..postcommastring_literal.pop",
-          "match": "(?<=, )[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*\")"
-        },
-        {
-          "name": "entity.name.function.invocation..postcommanumero_literal.pop",
-          "match": "(?<=, )[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*\\d)"
-        },
-        {
-          "name": "entity.name.function.invocation..postcommahexadecimal_literal.pop",
-          "match": "(?<=, )[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*\\$)"
-        },
-        {
-          "name": "variable.other.readwrite.pop",
-          "match": "(?<=\\b(o|a|os|as|o|a|os|as|à|às|ao|aos|no|na|nos|nas|pelo|pela|pelos|pelas|deste|desta|destes|destas|dum|duma|duns|dumas)\\b\\s+)[A-Za-zÀ-ÿ_\\-\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\'\\d\\&\\@\\ƒŠŒŽœžŸ£µ\\-\\#\/ ]*?(?=((\\[|\\.|\\:|\\;|\\,|\\()| \\d|\\s+\\b(\\d|à|às|ao|aos|como|no|na|nos|nas|pelo|pela|pelos|pelas|denominado|denominada|denominados|denominadas|menos|mais|multiplicado|dividido|não|for|é|estiver|está|começar|puder|pode|o|a|os|as|deste|desta|destes|destas|um|uma|uns|umas|dum|duma|duns|dumas|para|em|usando|com|desde|por)\\b))"
-        },
-        {
-          "name": "entity.name.function.invocation.procedure.pop",
-          "match": "(?<= )[A-ZÀ-ß][A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?(?=\\s*\\.)"
-        },
-        {
-          "name": "variable.other.readwrite.colchete.pop",
-          "match": "(?<=\\b(O|A|Os|As)\\b\\s+)[A-Za-zÀ-ÿ_\\-\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\'\\d\\&\\@\\ƒŠŒŽœžŸ£µ\\-\\#\/ ]*?(?=\\s*(\\[|\\.))"
-        }        
+          "match": "[A-Za-zÀ-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#\\/]+"
+        }
       ]
-    }    
-  },
-  "scopeName": "source.escopo.portugues"
+    }
+  }
 }
