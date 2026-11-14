@@ -69,22 +69,14 @@
       ]
     },
     "rotinas-e-funções": {
-      "patterns": [
+      "patterns": [        
         {
-          "name": "storage.type.function.Função.portugues",
-          "match": "Função\\s*para\\s*que\\s*se\\s*determine\\s*se"
-        },
-        {
-          "name": "storage.type.function.Função.portugues",
-          "match": "para\\s*que\\s*se\\s*determine\\s*se"
+          "name": "storage.type.function.Função-booleana.portugues",
+          "match": "(Função\\s+)?(para\\s+que\\s+se)(\\s+determine\\s+se\\s)?"
         },
         {
           "name": "storage.type.function.Rotina.portugues",
-          "match": "Rotina\\s*para\\s*que\\s*se"
-        },
-        {
-          "name": "storage.type.function.Rotina.portugues",
-          "match": "para\\s*que\\s*se"
+          "match": "(Rotina\\s+)?(para\\s+que\\s+se\\s)"
         }
       ]
     },
