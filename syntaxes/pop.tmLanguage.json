@@ -79,7 +79,7 @@
         }
       ]
     },
-    "campos-denominados": {
+    "denominacao-de-campos": {
       "name": "meta.variable.declaration.field.portugues",
       "begin": "(?i)\\b(chamado|chamada|chamados|chamadas|denominado|denominada|denominados|denominadas)\\b(?=\\s)",
       "beginCaptures": {
@@ -129,7 +129,7 @@
       },
       "patterns": [
         {
-          "include": "#campos-denominados"
+          "include": "#denominacao-de-campos"
         },
         {
           "name": "comment.block.portugues",
