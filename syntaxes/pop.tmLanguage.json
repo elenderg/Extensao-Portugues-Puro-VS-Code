@@ -67,20 +67,20 @@
     "rotinas-e-funções": {
       "patterns": [
         {
+          "name": "storage.type.function.Função.portugues",
+          "match": "Função\\s*para\\s*que\\s*se\\s*determine\\s*se"
+        },
+        {
+          "name": "storage.type.function.Função.portugues",
+          "match": "para\\s*que\\s*se\\s*determine\\s*se"
+        },
+        {
           "name": "storage.type.function.Rotina.portugues",
           "match": "Rotina\\s*para\\s*que\\s*se"
         },
         {
-          "name": "storage.type.function.Função.portugues",
-          "match": "Função\\s*para\\s*que\\s*se"
-        },
-        {
-          "name": "storage.type.function.indeterminado.portugues",
-          "match": "para\\s*que\\s*se"
-        },
-        {
           "name": "storage.type.function.Rotina.portugues",
-          "match": "determine\\s*se"
+          "match": "para\\s*que\\s*se"
         }
       ]
     },
