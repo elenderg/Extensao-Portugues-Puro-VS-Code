@@ -19,7 +19,11 @@
       "patterns": [
         {
           "match": "(\\[.*?\\])",
-          "name": "comment.bloco.portugues"
+          "name": "comment.observacao.portugues"
+        },
+        {
+          "match": "\\\\\\\\(.*)",
+          "name": "comment.linha.realce.portugues"
         },
         {
           "match": "\\\\(.*)",
@@ -111,7 +115,7 @@
       "end": "(?=(?i:\\b(?:e|sob)\\b|,|\\.|\\r?\\n))",
       "patterns": [
         {
-          "name": "comment.block.portugues",
+          "name": "comment.observacao.portugues",
           "begin": "\\[",
           "beginCaptures": {
             "0": {
@@ -153,7 +157,7 @@
           "include": "#denominacao-de-campos"
         },
         {
-          "name": "comment.block.portugues",
+          "name": "comment.observacao.portugues",
           "begin": "\\[",
           "beginCaptures": {
             "0": {
@@ -223,7 +227,7 @@
           "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"
         },
         {
-          "name": "comment.block.portugues",
+          "name": "comment.observacao.portugues",
           "begin": "\\[",
           "beginCaptures": {
             "0": {
