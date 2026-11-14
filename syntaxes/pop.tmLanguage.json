@@ -10,7 +10,7 @@
       "include": "#strings"
     },
     {
-      "include": "#constant"
+      "include": "#valores-literais"
     },
     {
       "include": "#function"
@@ -39,7 +39,7 @@
         }
       ]
     },
-    "constant": {
+    "valores-literais": {
       "patterns": [
         {
           "name": "constant.numeric.integer.decimal.portugues",
