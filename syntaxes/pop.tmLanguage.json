@@ -19,15 +19,15 @@
       "patterns": [
         {
           "match": "(\\[.*?\\])",
-          "name": "comment.observacao.portugues"
+          "name": "comment.block.observação.portugues"
         },
         {
           "match": "\\\\\\\\(.*)",
-          "name": "comment.linha.realce.portugues"
+          "name": "comment.block.documentation.portugues"
         },
         {
           "match": "\\\\(.*)",
-          "name": "comment.linha.portugues"
+          "name": "comment.line.character.linha.portugues"
         },
         {
           "match": "(\\(.*?\\))",
@@ -63,7 +63,7 @@
           "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"
         },
         {
-          "name": "support.type.primitive",
+          "name": "support.type.primitive.portugues",
           "match": "(?i)\\b(byte|byte|bytes|estrutura|estruturas)\\b"
         }
       ]
@@ -115,7 +115,7 @@
       "end": "(?=(?i:\\b(?:e|sob)\\b|,|\\.|\\r?\\n))",
       "patterns": [
         {
-          "name": "comment.observacao.portugues",
+          "name": "comment.observação.portugues",
           "begin": "\\[",
           "beginCaptures": {
             "0": {
@@ -157,7 +157,7 @@
           "include": "#denominacao-de-campos"
         },
         {
-          "name": "comment.observacao.portugues",
+          "name": "comment.observação.portugues",
           "begin": "\\[",
           "beginCaptures": {
             "0": {
@@ -227,7 +227,7 @@
           "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"
         },
         {
-          "name": "comment.observacao.portugues",
+          "name": "comment.observação.portugues",
           "begin": "\\[",
           "beginCaptures": {
             "0": {
