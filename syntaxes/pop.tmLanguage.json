@@ -92,7 +92,15 @@
         },
         {
           "name": "keyword.control.loop.portugues",
-          "match": "(?i)\\b(itere|pare|reitere)\\b"
+          "match": "(?i)\\b(diga|itere|pare|reitere)\\b"
+        },
+        {
+          "name": "keyword.control.instruções.portugues",
+          "match": "(?i)\\b(aponte|decodifique|direcione|empilhe|empregue|preserve|redirecione)\\b"
+        },
+        {
+          "name": "keyword.operator.portugues",
+          "match": "(?i)\\b(mais|menos)\\b|(\\b(acompanhado)\\b\\s+\\b(de)\\b)|(\\b(dividido)\\b\\s+\\b(por)\\b)|(\\b(junto)\\b\\s+\\b(com)\\b)|(\\b(juntamente)\\b\\s+\\b(com)\\b)|(\\b(multiplicado)\\b\\s+\\b(por)\\b)|(\\b(seguido)\\b\\s+\\b(de)\\b)|(\\b(seguida)\\b\\s+\\b(de)\\b)"
         }
       ] 
     },
@@ -135,7 +143,7 @@
           "name": "keyword.language.iniciadores.portugues"
         }
       },
-      "end": "(?i)(?=(\\b(a|à|abaixo|acerca|acima|acompanhado|ainda|algum|ante|antes|ao|aos|aproximadamente|após|as|às|através|até|bastante|cabe|cerca|chamada|chamadas|chamado|chamados|com|começa|começando|começar|como|comprida|comprido|contendo|conter|contiver|contém|contêm|couber|dada|dadas|dado|dados|dando|debaixo|dentre|dentro|depois|desde|dessa|dessas|desse|desses|desta|destas|deste|destes|deve|devem|deveras|deveria|deveriam|dividido|dum|duma|dumas|duns|durante|e|é|em|enquanto|entre|então|essa|essas|esse|esses|esta|estamos|estar|estarem|estará|estarão|estas|estava|estavam|este|estes|estiver|estiverem|está|estão|excede|excedem|existe|existem|existir|finaliza|finalizar|foi|for|foram|forem|houver|há|igual|inicia|iniciar|invoque|juntamente|junto|já|limitando-o|mais|menores|menos|multiplicado|na|nas|necessita|necessitar|negativamente|negativo|nem|nessa|nessas|nesse|nesses|nesta|nestas|neste|nestes|no|nos|num|numa|numas|nuns|não|o|obtendo|os|ou|para|parece|parecida|parecido|partindo|partir|pela|pelas|pelo|pelos|perante|perto|pior|pode|podem|podemos|poderia|por|possuem|possui|possuir|pouco|puder|puderem|qual|quanto|quão|regressivamente|relativa|requer|resultando|retornando|seguida|seguido|seja|sejam|sem|semelhante|ser|será|serão|similar|sob|sobre|somente|supera|superam|superar|são|só|tal|tanto|tem|ter|termina|terminar|tiver|tão|têm|ultrapassou|um|uma|umas|uns|usando|versus|vezes|via|voltada|voltado)\\b))|\\\\|\\:|\\.|\\,|\\;|(de (essa|essas|esse|esses|um|uma|umas|uns))",
+      "end": "(?i)(?=(\\b(a|à|abaixo|acerca|acima|acompanhado|ainda|algum|ante|antes|ao|aos|aproximadamente|após|as|às|através|até|cabe|cerca|chamada|chamadas|chamado|chamados|com|começa|começando|começar|como|comprida|comprido|contendo|conter|contiver|contém|contêm|couber|dada|dadas|dado|dados|dando|debaixo|dentre|dentro|depois|desde|dessa|dessas|desse|desses|desta|destas|deste|destes|deve|devem|deveras|deveria|deveriam|dividido|dum|duma|dumas|duns|durante|e|é|em|enquanto|entre|então|essa|essas|esse|esses|esta|estamos|estar|estarem|estará|estarão|estas|estava|estavam|este|estes|estiver|estiverem|está|estão|excede|excedem|existe|existem|existir|finaliza|finalizar|foi|for|foram|forem|houver|há|igual|inicia|iniciar|invoque|juntamente|junto|já|limitando-o|mais|menores|menos|multiplicado|na|nas|necessita|necessitar|negativamente|negativo|nem|nessa|nessas|nesse|nesses|nesta|nestas|neste|nestes|no|nos|num|numa|numas|nuns|não|o|obtendo|os|ou|para|parece|parecida|parecido|partindo|partir|pela|pelas|pelo|pelos|perante|perto|pode|podem|podemos|poderia|por|possuem|possui|possuir|pouco|puder|puderem|qual|quanto|quão|regressivamente|relativa|requer|resultando|retornando|seguida|seguido|seja|sejam|sem|semelhante|ser|será|serão|similar|sob|sobre|somente|supera|superam|superar|são|só|tal|tanto|tem|ter|termina|terminar|tiver|tão|têm|ultrapassou|um|uma|umas|uns|usando|versus|vezes|via|voltada|voltado)\\b))|\\\\|\\:|\\.|\\,|\\;|(de (essa|essas|esse|esses|um|uma|umas|uns))",
       "endCaptures": {
         "1": {
           "name": "keyword.operator.declaration.portugues"
@@ -192,7 +200,7 @@
           "name": "keyword.language.iniciadores.portugues"
         }
       },
-      "end": "(?i)(?=(\\b(a|à|abaixo|acerca|acima|acompanhado|ainda|algum|ante|antes|ao|aos|aproximadamente|após|as|às|através|até|bastante|cabe|cerca|com|começa|começando|começar|como|comprida|comprido|contendo|conter|contiver|contém|contêm|couber|dada|dadas|dado|dados|dando|debaixo|dentre|dentro|depois|desde|dessa|dessas|desse|desses|desta|destas|deste|destes|deve|devem|deveras|deveria|deveriam|dividido|dum|duma|dumas|duns|durante|e|é|em|enquanto|entre|então|essa|essas|esse|esses|esta|estamos|estar|estarem|estará|estarão|estas|estava|estavam|este|estes|estiver|estiverem|está|estão|excede|excedem|existe|existem|existir|finaliza|finalizar|foi|for|foram|forem|houver|há|igual|inicia|iniciar|invoque|juntamente|junto|já|limitando-o|mais|menores|menos|multiplicado|na|nas|necessita|necessitar|negativamente|negativo|nem|nessa|nessas|nesse|nesses|nesta|nestas|neste|nestes|no|nos|num|numa|numas|nuns|não|o|obtendo|os|ou|para|parece|parecida|parecido|partindo|partir|pela|pelas|pelo|pelos|perante|perto|pior|pode|podem|podemos|poderia|por|possuem|possui|possuir|pouco|puder|puderem|qual|quanto|quão|regressivamente|relativa|requer|resultando|retornando|seguida|seguido|seja|sejam|sem|semelhante|ser|será|serão|similar|sob|sobre|somente|supera|superam|superar|são|só|tal|tanto|tem|ter|termina|terminar|tiver|tão|têm|ultrapassou|um|uma|umas|uns|usando|versus|vezes|via|voltada|voltado)\\b))|\\\\|\\:|\\.|\\,|\\;|(de (essa|essas|esse|esses|um|uma|umas|uns))",
+      "end": "(?i)(?=(\\b(a|à|abaixo|acerca|acima|acompanhado|ainda|algum|ante|antes|ao|aos|aproximadamente|após|as|às|através|até|bastante|cabe|cerca|com|começa|começando|começar|como|comprida|comprido|contendo|conter|contiver|contém|contêm|couber|dada|dadas|dado|dados|dando|debaixo|dentre|dentro|depois|desde|dessa|dessas|desse|desses|desta|destas|deste|destes|deve|devem|deveras|deveria|deveriam|dividido|dum|duma|dumas|duns|durante|e|é|em|enquanto|entre|então|essa|essas|esse|esses|esta|estamos|estar|estarem|estará|estarão|estas|estava|estavam|este|estes|estiver|estiverem|está|estão|excede|excedem|existe|existem|existir|finaliza|finalizar|foi|for|foram|forem|houver|há|igual|inicia|iniciar|invoque|juntamente|junto|já|limitando-o|mais|menores|menos|multiplicado|na|nas|necessita|necessitar|negativamente|negativo|nem|nessa|nessas|nesse|nesses|nesta|nestas|neste|nestes|no|nos|num|numa|numas|nuns|não|o|obtendo|os|ou|para|parece|parecida|parecido|partindo|partir|pela|pelas|pelo|pelos|perante|perto|pode|podem|podemos|poderia|por|possuem|possui|possuir|pouco|puder|puderem|qual|quanto|quão|regressivamente|relativa|requer|resultando|retornando|seguida|seguido|seja|sejam|sem|semelhante|ser|será|serão|similar|sob|sobre|somente|supera|superam|superar|são|só|tal|tanto|tem|ter|termina|terminar|tiver|tão|têm|ultrapassou|um|uma|umas|uns|usando|versus|vezes|via|voltada|voltado)\\b))|\\\\|\\:|\\.|\\,|\\;|(de (essa|essas|esse|esses|um|uma|umas|uns))",
       "endCaptures": {
         "1": {
           "name": "keyword.operator.declaration.portugues"
@@ -254,26 +262,55 @@
         }
       ]
     },
-    "preposições": {
-      "patterns": [
-        {
-          
-        }        
-      ] 
-    },
+    
     "conjunções": {
       "patterns": [
         {
-          
+          "name": "keyword.other.conjunções.portugues",
+          "match": "\\b(e|enquanto|nem|ou)\\b"
+        }       
+      ] 
+    },
+    "verbos": {
+      "patterns": [
+        {
+          "name": "keyword.other.verbos.portugues",
+          "match": "\\b(cabe|começa|começando|começar|contendo|conter|contiver|contém|contêm|couber|dado|dada|dados|dadas|dando|deve|devem|deveria|deveriam|estamos|estar|estarem|estará|estarão|estava|estavam|estiver|estiver|estiverem|está|estão|excede|excedem|existe|existem|existir|finaliza|finalizar|foi|for|foram|forem|houver|há|inicia|iniciar|invoque|limitando-o|multiplicado|necessita|necessitar|obtendo|parece|partindo|partir|pode|podem|podemos|poderia|poderiam|possuem|possui|possui|possuir|puder|puderem|requer|resultando|retornando|seja|sejam|ser|será|serão|supera|superam|superar|são|tem|ter|termina|terminar|tiver|têm|ultrapassou|usando|é)\\b)"
         }        
       ] 
     },
-    "outros": {
+    "advérbios": {
       "patterns": [
         {
-          
+          "name": "keyword.other.advérbios.portugues",
+          "match": "\\b(abaixo|acima|ainda|antes|aproximadamente|cerca|dentro|depois|deveras|então|junto|já|mais|menos|negativamente|perto|pouco|quão|regressivamente|somente|só|tanto|tão|vezes)\\b)"
+        }        
+      ] 
+    },
+    "pronomes": {
+      "patterns": [
+        {
+          "name": "keyword.other.conjunções.portugues",
+          "match": "\\b(algum|qual|tal|quanto)\\b)"
+        }        
+      ] 
+    },
+    "preposições": {
+      "patterns": [
+        {
+          "name": "keyword.other.preposições.portugues",
+          "match": "\\b(acerca|ante|após|através|até|com|debaixo|dentre|dentro|desde|durante|em|entre|para|perante|por|sem|sob|sobre|versus|via)\\b|(\\b(a|de)\\b\\s+\\b(essa|essas|esse|esses|um|uma|umas|uns)\\b)"
+        }        
+      ] 
+    },
+    "adjetivos": {
+      "patterns": [
+        {
+          "name": "keyword.other.conjunções.portugues",
+          "match": "\\b(comprida|comprido|igual|menores|negativo|parecida|parecido|relativa|semelhante|similar|voltada|voltado)\\b)"
         }        
       ] 
     }
+
   }
 }
