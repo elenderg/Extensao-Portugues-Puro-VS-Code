@@ -318,7 +318,7 @@
       "patterns": [
         {
           "name": "entity.name.function.invocation.procedure.portugues",
-          "match": "[A-ZÀ-ß][A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?"
+          "match": "."
         }        
       ] 
     }
