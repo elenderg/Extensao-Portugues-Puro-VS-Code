@@ -72,7 +72,7 @@
       "endCaptures": {
         "1": {"name": "keyword.control.operator.portugues"            },
         "2": {"name": "keyword.control.operator.declaration.portugues"},
-        "3": {"name": "keyword.control.finalizador1.portugues"        }
+        "3": {"name": "keyword.control.finalizador.tipo.portugues"    }
       },
       "patterns": [
         {"include": "#denominacao-de-campos"},
@@ -103,7 +103,7 @@
       "endCaptures": {
         "1": {"name": "keyword.control.operator.portugues"            },
         "2": {"name": "keyword.control.operator.declaration.portugues"},
-        "3": {"name": "keyword.control.finalizador2.portugues"        }
+        "3": {"name": "keyword.control.finalizador.escalar.portugues" }
       },
       "patterns": [
         {"include": "#denominacao-de-campos"},
@@ -134,7 +134,7 @@
       "endCaptures": {
         "1": {"name": "keyword.control.operator.portugues"            },
         "2": {"name": "keyword.control.operator.declaration.portugues"},
-        "3": {"name": "keyword.control.finalizador3.portugues"        }
+        "3": {"name": "keyword.control.finalizador.variável.portugues"}
       },
       "patterns": [
         {"include": "#operadores"                                                                                          },
