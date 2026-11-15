@@ -182,7 +182,7 @@
     },
     "verbos": {
       "patterns": [
-        {"name": "keyword.other.verbos.portugues", 
+        {"name": "keyword.control.other.verbos.portugues", 
          "match": "\\b(cabe|começa|começando|começar|contendo|conter|contiver|contém|contêm|couber|dado|dada|dados|dadas|dando|deve|devem|deveria|deveriam|estamos|estar|estarem|estará|estarão|estava|estavam|estiver|estiver|estiverem|está|estão|excede|excedem|existe|existem|existir|finaliza|finalizar|foi|for|foram|forem|houver|há|inicia|iniciar|invoque|limitando-o|multiplicado|necessita|necessitar|obtendo|parece|partindo|partir|pode|podem|podemos|poderia|poderiam|possuem|possui|possui|possuir|puder|puderem|requer|resultando|retornando|seja|sejam|ser|será|serão|supera|superam|superar|são|tem|ter|termina|terminar|tiver|têm|ultrapassou|usando|é)\\b"}
       ]
     },
