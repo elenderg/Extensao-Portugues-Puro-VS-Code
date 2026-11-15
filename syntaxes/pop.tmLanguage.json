@@ -317,7 +317,7 @@
     "chamadas-de-rotina": {
       "patterns": [
         {
-          "name": "entity.name.function.invocation.procedure.portugues",
+          "name": "entity.name.function.chamada-de-rotina.portugues",
           "match": "."
         }        
       ] 
