@@ -3,20 +3,20 @@
   "name": "PoP",
   "scopeName": "source.escopo.portugues",
   "patterns": [
-    {"include": "#comentários"},
-    {"include": "#strings-literais"},
-    {"include": "#valores-literais"},
-    {"include": "#rotinas-e-funções"},
-    {"include": "#palavras-chave"},
-    {"include": "#operadores"},
-    {"include": "#tipos"},
-    {"include": "#variáveis"},
-    {"include": "#conjunções"},
-    {"include": "#verbos"},
-    {"include": "#advérbios"},
-    {"include": "#pronomes"},
-    {"include": "#preposições"},
-    {"include": "#adjetivos"},
+    {"include": "#comentários"       },
+    {"include": "#strings-literais"  },  
+    {"include": "#rotinas-e-funções" },
+    {"include": "#palavras-chave"    },
+    {"include": "#operadores"        },
+    {"include": "#tipos"             },
+    {"include": "#variáveis"         },
+    {"include": "#valores-literais"  },    
+    {"include": "#conjunções"        },
+    {"include": "#verbos"            },
+    {"include": "#advérbios"         },
+    {"include": "#pronomes"          },
+    {"include": "#preposições"       },
+    {"include": "#adjetivos"         },
     {"include": "#chamadas-de-rotina"}
   ],
   "repository": {
@@ -31,11 +31,11 @@
     "strings-literais": {"patterns": [{"name": "string.quoted.double.pop", "begin": "\"", "end": "\""}]},
     "valores-literais": {
       "patterns": [
-        {"name": "constant.numeric.integer.decimal.portugues",     "match": "\\b(-?[\\d]+)\\b"},
-        {"name": "constant.numeric.integer.hexadecimal.portugues", "match": "(\\$[a-fA-F\\d]+)"},
-        {"name": "constant.numeric.integer.float.decimal.portugues", "match": "\\b(-?[\\d]+\\-[\\d]+/[\\d]+)\\b"},
-        {"name": "constant.language.portugues", "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"},
-        {"name": "support.type.primitive.portugues",               "match": "(?i)\\b(byte|bytes|estrutura|estruturas)\\b"}
+        {"name": "constant.numeric.número.decimal.portugues",     "match": "\\b(-?[\\d]+)\\b"},
+        {"name": "constant.numeric.número.hexadecimal.portugues", "match": "(\\$[a-fA-F\\d]+)"},
+        {"name": "constant.numeric.número.fracionário.portugues", "match": "\\b(-?[\\d]+\\-[\\d]+/[\\d]+)\\b"},
+        {"name": "support.type.primitive.portugues",              "match": "(?i)\\b(byte|bytes|estrutura|estruturas)\\b"},
+        {"name": "constant.language.portugues",                   "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"}        
       ]
     },
     "rotinas-e-funções": {
@@ -107,9 +107,9 @@
       "patterns": [
         {"include": "#operadores"},
         {"include": "#strings-literais"},
-        {"name": "constant.numeric.integer.decimal.portugues",       "match": "\\b(-?[\\d]+)\\b"},
-        {"name": "constant.numeric.integer.hexadecimal.portugues",   "match": "(\\$[a-fA-F\\d]+)"},
-        {"name": "constant.numeric.integer.float.decimal.portugues", "match": "\\b(-?[\\d]+\\-[\\d]+/[\\d]+)\\b"},
+        {"name": "constant.numeric.número.decimal.portugues",       "match": "\\b(-?[\\d]+)\\b"},
+        {"name": "constant.numeric.número.hexadecimal.portugues",   "match": "(\\$[a-fA-F\\d]+)"},
+        {"name": "constant.numeric.número.fracionário.portugues", "match": "\\b(-?[\\d]+\\-[\\d]+/[\\d]+)\\b"},
         {"name": "constant.language.portugues",                      "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"},
         {
           "name": "comment.observação.portugues",
