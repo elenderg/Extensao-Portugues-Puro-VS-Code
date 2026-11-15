@@ -24,7 +24,7 @@
     "comentários": {
       "patterns": [
         {"match": "(\\[.*?\\])",  "name": "comment.block.observação.portugues"    },
-        {"match": "\\\\\\\\(.*)", "name": "comment.block.documentação.portugues" },
+        {"match": "\\\\\\\\(.*)", "name": "comment.block.documentação.portugues"  },
         {"match": "\\\\(.*)",     "name": "comment.line.character.linha.portugues"},
         {"match": "(\\(.*?\\))",  "name": "comment.qualificador.portugues"        }
       ]
