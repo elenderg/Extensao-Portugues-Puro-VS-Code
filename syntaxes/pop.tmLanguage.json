@@ -3,125 +3,56 @@
   "name": "PoP",
   "scopeName": "source.escopo.portugues",
   "patterns": [
-    {
-      "include": "#comentários"
-    },
-    {
-      "include": "#strings-literais"
-    },
-    {
-      "include": "#valores-literais"
-    },
-    {
-      "include": "#rotinas-e-funções"
-    },
-    {
-      "include": "#palavras-chave"
-    },
-    {
-      "include": "#operadores"
-    },
-    {
-      "include": "#tipos"
-    },
-    {
-      "include": "#variáveis"
-    },
-    {
-      "include": "#conjunções"
-    },
-    {
-      "include": "#verbos"
-    },
-    {
-      "include": "#advérbios"
-    },
-    {
-      "include": "#pronomes"
-    },
-    {
-      "include": "#preposições"
-    },
-    {
-      "include": "#adjetivos"
-    },
-    {
-      "include": "#chamadas-de-rotina"
-    }
+    {"include": "#comentários"},
+    {"include": "#strings-literais"},
+    {"include": "#valores-literais"},
+    {"include": "#rotinas-e-funções"},
+    {"include": "#palavras-chave"},
+    {"include": "#operadores"},
+    {"include": "#tipos"},
+    {"include": "#variáveis"},
+    {"include": "#conjunções"},
+    {"include": "#verbos"},
+    {"include": "#advérbios"},
+    {"include": "#pronomes"},
+    {"include": "#preposições"},
+    {"include": "#adjetivos"},
+    {"include": "#chamadas-de-rotina"}
   ],
   "repository": {
     "comentários": {
       "patterns": [
-        {
-          "match": "(\\[.*?\\])",
-          "name": "comment.block.observação.portugues"
-        },
-        {
-          "match": "\\\\\\\\(.*)",
-          "name": "comment.block.documentation.portugues"
-        },
-        {
-          "match": "\\\\(.*)",
-          "name": "comment.line.character.linha.portugues"
-        },
-        {
-          "match": "(\\(.*?\\))",
-          "name": "comment.qualificador.portugues"
-        }
+        {"match": "(\\[.*?\\])", "name": "comment.block.observação.portugues"},
+        {"match": "\\\\\\\\(.*)", "name": "comment.block.documentation.portugues"},
+        {"match": "\\\\(.*)", "name": "comment.line.character.linha.portugues"},
+        {"match": "(\\(.*?\\))", "name": "comment.qualificador.portugues"}
       ]
     },
     "strings-literais": {
       "patterns": [
-        {
-          "name": "string.quoted.double.pop",
-          "begin": "\"",
-          "end": "\""
-        }
+        {"name": "string.quoted.double.pop", "begin": "\"", "end": "\""}
       ]
     },
     "valores-literais": {
       "patterns": [
-        {
-          "name": "constant.numeric.integer.decimal.portugues",
-          "match": "\\b(-?[\\d]+)\\b"
-        },
-        {
-          "name": "constant.numeric.integer.hexadecimal.portugues",
-          "match": "(\\$[a-fA-F\\d]+)"
-        },
-        {
-          "name": "constant.numeric.integer.float.decimal.portugues",
-          "match": "\\b(-?[\\d]+\\-[\\d]+/[\\d]+)\\b"
-        },
-        {
-          "name": "constant.language.portugues",
-          "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"
-        },
-        {
-          "name": "support.type.primitive.portugues",
-          "match": "(?i)\\b(byte|byte|bytes|estrutura|estruturas)\\b"
-        }
+        {"name": "constant.numeric.integer.decimal.portugues", "match": "\\b(-?[\\d]+)\\b"},
+        {"name": "constant.numeric.integer.hexadecimal.portugues", "match": "(\\$[a-fA-F\\d]+)"},
+        {"name": "constant.numeric.integer.float.decimal.portugues", "match": "\\b(-?[\\d]+\\-[\\d]+/[\\d]+)\\b"},
+        {"name": "constant.language.portugues", "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"},
+        {"name": "support.type.primitive.portugues", "match": "(?i)\\b(byte|byte|bytes|estrutura|estruturas)\\b"}
       ]
     },
     "rotinas-e-funções": {
       "patterns": [
-        {
-          "name": "storage.type.function.Função-booleana.portugues",
-          "match": "(Função\\s+)?(para\\s+que\\s+se)(\\s+determine\\s+se\\s)"
-        },
-        {
-          "name": "storage.type.function.Rotina.portugues",
-          "match": "(Rotina\\s+)?(para\\s+que\\s+se\\s)"
-        }
+        {"name": "storage.type.function.Função-booleana.portugues", "match": "(Função\\s+)?(para\\s+que\\s+se)(\\s+determine\\s+se\\s)"},
+        {"name": "storage.type.function.Rotina.portugues", "match": "(Rotina\\s+)?(para\\s+que\\s+se\\s)"}
       ]
     },
     "denominacao-de-campos": {
       "name": "meta.variable.declaration.field.portugues",
       "begin": "(?i)\\b(chamado|chamada|chamados|chamadas|denominado|denominada|denominados|denominadas)\\b(?=\\s)",
       "beginCaptures": {
-        "1": {
-          "name": "keyword.language.iniciadores.portugues"
-        }
+        "1": {"name": "keyword.language.iniciadores.portugues"}
       },
       "end": "(?=(?i:\\b(?:e|sob)\\b|,|\\.|\\r?\\n))",
       "patterns": [
@@ -129,15 +60,11 @@
           "name": "comment.observação.portugues",
           "begin": "\\[",
           "beginCaptures": {
-            "0": {
-              "name": "punctuation.definition.comment.begin.portugues"
-            }
+            "0": {"name": "punctuation.definition.comment.begin.portugues"}
           },
           "end": "\\]",
           "endCaptures": {
-            "0": {
-              "name": "punctuation.definition.comment.end.portugues"
-            }
+            "0": {"name": "punctuation.definition.comment.end.portugues"}
           }
         },
         {
@@ -146,234 +73,137 @@
         }
       ]
     },
-    
     "tipos": {
       "name": "meta.type.declaration.tipo.portugues",
       "begin": "(?i)\\b(dessa|dessas|desse|desses|dum|duma|dumas|duns|essa|essas|esse|esses|nessa|nessas|nesse|nesses|nos|num|numa|numas|nuns|um|uma|umas|uns)\\b(?=\\s)",
       "beginCaptures": {
-        "1": {
-          "name": "keyword.language.iniciadores.portugues"
-        }
+        "1": {"name": "keyword.language.iniciadores.portugues"}
       },
       "end": "(?i)(?=(acompanhado\\s+de|dividido\\s+por|juntamente\\s+com|junto\\s+com|multiplicado\\s+por|seguido\\s+de|seguida\\s+de)|(\\b(a|à|abaixo|acerca|acima|ainda|algum|ante|antes|ao|aos|aproximadamente|após|as|às|através|até|cabe|cerca|chamada|chamadas|chamado|chamados|com|começa|começando|começar|como|comprida|comprido|contendo|conter|contiver|contém|contêm|couber|dada|dadas|dado|dados|dando|debaixo|dentre|dentro|depois|desde|dessa|dessas|desse|desses|desta|destas|deste|destes|deve|devem|deveras|deveria|deveriam|dum|duma|dumas|duns|durante|e|é|em|enquanto|entre|então|essa|essas|esse|esses|esta|estamos|estar|estarem|estará|estarão|estas|estava|estavam|este|estes|estiver|estiverem|está|estão|excede|excedem|existe|existem|existir|finaliza|finalizar|foi|for|foram|forem|houver|há|igual|inicia|iniciar|invoque|já|limitando-o|mais|menores|menos|na|nas|necessita|necessitar|negativamente|negativo|nem|nessa|nessas|nesse|nesses|nesta|nestas|neste|nestes|no|nos|num|numa|numas|nuns|não|o|obtendo|os|ou|para|parece|parecida|parecido|partindo|partir|pela|pelas|pelo|pelos|perante|perto|pode|podem|podemos|poderia|por|possuem|possui|possuir|pouco|puder|puderem|qual|quanto|quão|regressivamente|relativa|requer|resultando|retornando|seja|sejam|sem|semelhante|ser|será|serão|similar|sob|sobre|somente|supera|superam|superar|são|só|tal|tanto|tem|ter|termina|terminar|tiver|tão|têm|ultrapassou|um|uma|umas|uns|usando|versus|vezes|via|voltada|voltado)\\b)|\\\\|\\:|\\.|\\,|\\;|(\\bde\\b\\s+(essa|essas|esse|esses|um|uma|umas|uns)))",
       "endCaptures": {
-        "1": {
-          "name": "keyword.operator.portugues"
-        },
-        "2": {
-          "name": "keyword.operator.declaration.portugues"
-        },
-        "3": {
-          "name": "keyword.control.finalizador.portugues"
-        }
+        "1": {"name": "keyword.operator.portugues"},
+        "2": {"name": "keyword.operator.declaration.portugues"},
+        "3": {"name": "keyword.control.finalizador.portugues"}
       },
       "patterns": [
-        {
-          "include": "#denominacao-de-campos"
-        },
-        {
-          "include": "#operadores"
-        },
-        {
-          "include": "#strings-literais"
-        },
+        {"include": "#denominacao-de-campos"},
+        {"include": "#operadores"},
+        {"include": "#strings-literais"},
         {
           "name": "comment.observação.portugues",
           "begin": "\\[",
           "beginCaptures": {
-            "0": {
-              "name": "punctuation.definition.comment.begin.portugues"
-            }
+            "0": {"name": "punctuation.definition.comment.begin.portugues"}
           },
           "end": "\\]",
           "endCaptures": {
-            "0": {
-              "name": "punctuation.definition.comment.end.portugues"
-            }
+            "0": {"name": "punctuation.definition.comment.end.portugues"}
           }
         },
         {
           "name": "comment.qualificador.portugues",
           "begin": "\\(",
           "beginCaptures": {
-            "0": {
-              "name": "comment.qualificador.portugues"
-            }
+            "0": {"name": "comment.qualificador.portugues"}
           },
           "end": "\\)",
           "endCaptures": {
-            "0": {
-              "name": "punctuation.definition.comment.end.portugues"
-            }
+            "0": {"name": "punctuation.definition.comment.end.portugues"}
           }
         },
-        {
-          "name": "support.type.simples.portugues",
-          "match": "[A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#\\/]+"
-        }
+        {"name": "support.type.simples.portugues", "match": "[A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#\\/]+"}
       ]
     },
     "variáveis": {
       "name": "meta.type.declaration.variáveis.portugues",
       "begin": "(?i)\\b(a|ao|aos|as|à|às|chamada|chamadas|chamado|chamados|denominada|denominadas|denominado|denominados|desta|destas|deste|destes|esta|estas|este|estes|na|nas|nesta|nestas|neste|nestes|no|nos|o|os|pela|pelas|pelo|pelos)\\b(?=\\s)",
       "beginCaptures": {
-        "1": {
-          "name": "keyword.language.iniciadores.portugues"
-        }
+        "1": {"name": "keyword.language.iniciadores.portugues"}
       },
       "end": "(?i)(?=(acompanhado\\s+de|dividido\\s+por|juntamente\\s+com|junto\\s+com|multiplicado\\s+por|seguido\\s+de|seguida\\s+de)|(\\b(a|à|abaixo|acerca|acima|ainda|algum|ante|antes|ao|aos|aproximadamente|após|as|às|através|até|bastante|cabe|cerca|com|começa|começando|começar|como|comprida|comprido|contendo|conter|contiver|contém|contêm|couber|dada|dadas|dado|dados|dando|debaixo|dentre|dentro|depois|desde|dessa|dessas|desse|desses|desta|destas|deste|destes|deve|devem|deveras|deveria|deveriam|dum|duma|dumas|duns|durante|e|é|em|enquanto|entre|então|essa|essas|esse|esses|esta|estamos|estar|estarem|estará|estarão|estas|estava|estavam|este|estes|estiver|estiverem|está|estão|excede|excedem|existe|existem|existir|finaliza|finalizar|foi|for|foram|forem|houver|há|igual|inicia|iniciar|invoque|já|limitando-o|mais|menores|menos|na|nas|necessita|necessitar|negativamente|negativo|nem|nessa|nessas|nesse|nesses|nesta|nestas|neste|nestes|no|nos|num|numa|numas|nuns|não|o|obtendo|os|ou|para|parece|parecida|parecido|partindo|partir|pela|pelas|pelo|pelos|perante|perto|pode|podem|podemos|poderia|por|possuem|possui|possuir|pouco|puder|puderem|qual|quanto|quão|regressivamente|relativa|requer|resultando|retornando|seja|sejam|sem|semelhante|ser|será|serão|similar|sob|sobre|somente|supera|superam|superar|são|só|tal|tanto|tem|ter|termina|terminar|tiver|tão|têm|ultrapassou|um|uma|umas|uns|usando|versus|vezes|via|voltada|voltado)\\b)|\\\\|\\:|\\.|\\,|\\;|(\\bde\\b\\s+(essa|essas|esse|esses|um|uma|umas|uns)))",
       "endCaptures": {
-        "1": {
-          "name": "keyword.operator.portugues"
-        },
-        "2": {
-          "name": "keyword.operator.declaration.portugues"
-        },
-        "3": {
-          "name": "keyword.control.finalizador.portugues"
-        }
+        "1": {"name": "keyword.operator.portugues"},
+        "2": {"name": "keyword.operator.declaration.portugues"},
+        "3": {"name": "keyword.control.finalizador.portugues"}
       },
       "patterns": [
-        {
-          "include": "#operadores"
-        },
-        {
-          "include": "#strings-literais"
-        },
-        {
-          "name": "constant.numeric.integer.decimal.portugues",
-          "match": "\\b(-?[\\d]+)\\b"
-        },
-        {
-          "name": "constant.numeric.integer.hexadecimal.portugues",
-          "match": "(\\$[a-fA-F\\d]+)"
-        },
-        {
-          "name": "constant.numeric.integer.float.decimal.portugues",
-          "match": "\\b(-?[\\d]+\\-[\\d]+/[\\d]+)\\b"
-        },
-        {
-          "name": "constant.language.portugues",
-          "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"
-        },
+        {"include": "#operadores"},
+        {"include": "#strings-literais"},
+        {"name": "constant.numeric.integer.decimal.portugues", "match": "\\b(-?[\\d]+)\\b"},
+        {"name": "constant.numeric.integer.hexadecimal.portugues", "match": "(\\$[a-fA-F\\d]+)"},
+        {"name": "constant.numeric.integer.float.decimal.portugues", "match": "\\b(-?[\\d]+\\-[\\d]+/[\\d]+)\\b"},
+        {"name": "constant.language.portugues", "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"},
         {
           "name": "comment.observação.portugues",
           "begin": "\\[",
           "beginCaptures": {
-            "0": {
-              "name": "punctuation.definition.comment.begin.portugues"
-            }
+            "0": {"name": "punctuation.definition.comment.begin.portugues"}
           },
           "end": "\\]",
           "endCaptures": {
-            "0": {
-              "name": "punctuation.definition.comment.end.portugues"
-            }
+            "0": {"name": "punctuation.definition.comment.end.portugues"}
           }
         },
         {
           "name": "comment.qualificador.portugues",
           "begin": "\\(",
           "beginCaptures": {
-            "0": {
-              "name": "punctuation.definition.comment.begin.portugues"
-            }
+            "0": {"name": "punctuation.definition.comment.begin.portugues"}
           },
           "end": "\\)",
           "endCaptures": {
-            "0": {
-              "name": "punctuation.definition.comment.end.portugues"
-            }
+            "0": {"name": "punctuation.definition.comment.end.portugues"}
           }
         },
-        {
-          "name": "variable.other.constant.portugues",
-          "match": "(?<![A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#/])(?!(?:[0-9]+(?:/[0-9]+)?)(?![A-Za-zÀ-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#]))[A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#]+(?:/(?![0-9])[A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#]+)*"
-        }
+        {"name": "variable.other.constant.portugues", "match": "(?<![A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#/])(?!(?:[0-9]+(?:/[0-9]+)?)(?![A-Za-zÀ-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#]))[A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#]+(?:/(?![0-9])[A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#]+)*"}
       ]
     },
     "conjunções": {
       "patterns": [
-        {
-          "name": "keyword.other.conjunções.portugues",
-          "match": "\\b(e|enquanto|nem|ou)\\b"
-        }
+        {"name": "keyword.other.conjunções.portugues", "match": "\\b(e|enquanto|nem|ou)\\b"}
       ]
     },
     "palavras-chave": {
       "patterns": [
-        {
-          "name": "keyword.control.condicional.portugues",
-          "match": "(?i)\\b(se)\\b"
-        },
-        {
-          "name": "keyword.control.fluxo-de-execução.portugues",
-          "match": "(?i)\\b(retorne)\\b"
-        },
-        {
-          "name": "keyword.control.loop.portugues",
-          "match": "(?i)\\b(diga|itere|pare|reitere)\\b"
-        },
-        {
-          "name": "keyword.control.instruções.portugues",
-          "match": "(?i)\\b(aponte|decodifique|direcione|empilhe|empregue|preserve|redirecione)\\b"
-        }
+        {"name": "keyword.control.condicional.portugues", "match": "(?i)\\b(se)\\b"},
+        {"name": "keyword.control.fluxo-de-execução.portugues", "match": "(?i)\\b(retorne)\\b"},
+        {"name": "keyword.control.loop.portugues", "match": "(?i)\\b(diga|itere|pare|reitere)\\b"},
+        {"name": "keyword.control.instruções.portugues", "match": "(?i)\\b(aponte|decodifique|direcione|empilhe|empregue|preserve|redirecione)\\b"}
       ]
     },
     "operadores": {
       "patterns": [
-        {
-          "name": "keyword.control.operator.portugues",
-          "match": "(?i)\\b(mais|menos)\\b|(\\b(acompanhado)\\b\\s+\\b(de)\\b)|(\\b(dividido)\\b\\s+\\b(por)\\b)|(\\b(junto)\\b\\s+\\b(com)\\b)|(\\b(juntamente)\\b\\s+\\b(com)\\b)|(\\b(multiplicado)\\b\\s+\\b(por)\\b)|(\\b(seguido)\\b\\s+\\b(de)\\b)|(\\b(seguida)\\b\\s+\\b(de)\\b)"
-        }
+        {"name": "keyword.control.operator.portugues", "match": "(?i)\\b(mais|menos)\\b|(\\b(acompanhado)\\b\\s+\\b(de)\\b)|(\\b(dividido)\\b\\s+\\b(por)\\b)|(\\b(junto)\\b\\s+\\b(com)\\b)|(\\b(juntamente)\\b\\s+\\b(com)\\b)|(\\b(multiplicado)\\b\\s+\\b(por)\\b)|(\\b(seguido)\\b\\s+\\b(de)\\b)|(\\b(seguida)\\b\\s+\\b(de)\\b)"}
       ]
     },
     "verbos": {
       "patterns": [
-        {
-          "name": "keyword.other.verbos.portugues",
-          "match": "\\b(cabe|começa|começando|começar|contendo|conter|contiver|contém|contêm|couber|dado|dada|dados|dadas|dando|deve|devem|deveria|deveriam|estamos|estar|estarem|estará|estarão|estava|estavam|estiver|estiver|estiverem|está|estão|excede|excedem|existe|existem|existir|finaliza|finalizar|foi|for|foram|forem|houver|há|inicia|iniciar|invoque|limitando-o|multiplicado|necessita|necessitar|obtendo|parece|partindo|partir|pode|podem|podemos|poderia|poderiam|possuem|possui|possui|possuir|puder|puderem|requer|resultando|retornando|seja|sejam|ser|será|serão|supera|superam|superar|são|tem|ter|termina|terminar|tiver|têm|ultrapassou|usando|é)\\b"
-        }
+        {"name": "keyword.other.verbos.portugues", "match": "\\b(cabe|começa|começando|começar|contendo|conter|contiver|contém|contêm|couber|dado|dada|dados|dadas|dando|deve|devem|deveria|deveriam|estamos|estar|estarem|estará|estarão|estava|estavam|estiver|estiver|estiverem|está|estão|excede|excedem|existe|existem|existir|finaliza|finalizar|foi|for|foram|forem|houver|há|inicia|iniciar|invoque|limitando-o|multiplicado|necessita|necessitar|obtendo|parece|partindo|partir|pode|podem|podemos|poderia|poderiam|possuem|possui|possui|possuir|puder|puderem|requer|resultando|retornando|seja|sejam|ser|será|serão|supera|superam|superar|são|tem|ter|termina|terminar|tiver|têm|ultrapassou|usando|é)\\b"}
       ]
     },
     "advérbios": {
       "patterns": [
-        {
-          "name": "keyword.other.advérbios.portugues",
-          "match": "\\b(abaixo|acima|ainda|antes|aproximadamente|cerca|dentro|depois|deveras|então|já|mais|menos|negativamente|perto|pouco|quão|regressivamente|somente|só|tanto|tão|vezes)\\b"
-        }
+        {"name": "keyword.other.advérbios.portugues", "match": "\\b(abaixo|acima|ainda|antes|aproximadamente|cerca|dentro|depois|deveras|então|já|mais|menos|negativamente|perto|pouco|quão|regressivamente|somente|só|tanto|tão|vezes)\\b"}
       ]
     },
     "pronomes": {
       "patterns": [
-        {
-          "name": "keyword.other.conjunções.portugues",
-          "match": "\\b(algum|qual|tal|quanto)\\b"
-        }
+        {"name": "keyword.other.conjunções.portugues", "match": "\\b(algum|qual|tal|quanto)\\b"}
       ]
     },
     "preposições": {
       "patterns": [
-        {
-          "name": "keyword.other.preposições.portugues",
-          "match": "\\b(acerca|ante|após|através|até|debaixo|dentre|dentro|desde|durante|em|entre|para|perante|por|sem|sob|sobre|versus|via)\\b|(\\b(a|de)\\b\\s+\\b(essa|essas|esse|esses|um|uma|umas|uns)\\b)"
-        }
+        {"name": "keyword.other.preposições.portugues", "match": "\\b(acerca|ante|após|através|até|debaixo|dentre|dentro|desde|durante|em|entre|para|perante|por|sem|sob|sobre|versus|via)\\b|(\\b(a|de)\\b\\s+\\b(essa|essas|esse|esses|um|uma|umas|uns)\\b)"}
       ]
     },
     "adjetivos": {
       "patterns": [
-        {
-          "name": "keyword.other.conjunções.portugues",
-          "match": "\\b(comprida|comprido|igual|menores|negativo|parecida|parecido|relativa|semelhante|similar|voltada|voltado)\\b"
-        }
+        {"name": "keyword.other.conjunções.portugues", "match": "\\b(comprida|comprido|igual|menores|negativo|parecida|parecido|relativa|semelhante|similar|voltada|voltado)\\b"}
       ]
     },
     "chamadas-de-rotina": {
       "patterns": [
-        {
-          "name": "entity.name.function.chamada-de-rotina.portugues",
-          "match": "."
-        }
+        {"name": "entity.name.function.chamada-de-rotina.portugues", "match": "."}
       ]
     }
   }
