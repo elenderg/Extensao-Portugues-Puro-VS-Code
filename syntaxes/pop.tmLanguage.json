@@ -84,30 +84,6 @@
         }
       ]
     },
-    "palavras-chave": {
-      "patterns": [
-        {
-          "name": "keyword.control.condicional.portugues",
-          "match": "(?i)\\b(se)\\b"
-        },
-        {
-          "name": "keyword.control.fluxo-de-execução.portugues",
-          "match": "(?i)\\b(retorne)\\b"
-        },
-        {
-          "name": "keyword.control.loop.portugues",
-          "match": "(?i)\\b(diga|itere|pare|reitere)\\b"
-        },
-        {
-          "name": "keyword.control.instruções.portugues",
-          "match": "(?i)\\b(aponte|decodifique|direcione|empilhe|empregue|preserve|redirecione)\\b"
-        },
-        {
-          "name": "keyword.operator.portugues",
-          "match": "(?i)\\b(mais|menos)\\b|(\\b(acompanhado)\\b\\s+\\b(de)\\b)|(\\b(dividido)\\b\\s+\\b(por)\\b)|(\\b(junto)\\b\\s+\\b(com)\\b)|(\\b(juntamente)\\b\\s+\\b(com)\\b)|(\\b(multiplicado)\\b\\s+\\b(por)\\b)|(\\b(seguido)\\b\\s+\\b(de)\\b)|(\\b(seguida)\\b\\s+\\b(de)\\b)"
-        }
-      ] 
-    },
     "denominacao-de-campos": {
       "name": "meta.variable.declaration.field.portugues",
       "begin": "(?i)\\b(chamado|chamada|chamados|chamadas|denominado|denominada|denominados|denominadas)\\b(?=\\s)",
@@ -312,6 +288,31 @@
           "name": "keyword.other.conjunções.portugues",
           "match": "\\b(comprida|comprido|igual|menores|negativo|parecida|parecido|relativa|semelhante|similar|voltada|voltado)\\b"
         }               
+      ] 
+    },
+    
+    "palavras-chave": {
+      "patterns": [
+        {
+          "name": "keyword.control.condicional.portugues",
+          "match": "(?i)\\b(se)\\b"
+        },
+        {
+          "name": "keyword.control.fluxo-de-execução.portugues",
+          "match": "(?i)\\b(retorne)\\b"
+        },
+        {
+          "name": "keyword.control.loop.portugues",
+          "match": "(?i)\\b(diga|itere|pare|reitere)\\b"
+        },
+        {
+          "name": "keyword.control.instruções.portugues",
+          "match": "(?i)\\b(aponte|decodifique|direcione|empilhe|empregue|preserve|redirecione)\\b"
+        },
+        {
+          "name": "keyword.operator.portugues",
+          "match": "(?i)\\b(mais|menos)\\b|(\\b(acompanhado)\\b\\s+\\b(de)\\b)|(\\b(dividido)\\b\\s+\\b(por)\\b)|(\\b(junto)\\b\\s+\\b(com)\\b)|(\\b(juntamente)\\b\\s+\\b(com)\\b)|(\\b(multiplicado)\\b\\s+\\b(por)\\b)|(\\b(seguido)\\b\\s+\\b(de)\\b)|(\\b(seguida)\\b\\s+\\b(de)\\b)"
+        }
       ] 
     },
     "chamadas-de-rotina": {
