@@ -31,11 +31,11 @@
     },
     "strings-literais": {"patterns": [{"name": "string.quoted.double.pop", "begin": "\"", "end": "\""}]},
     "valores-literais": {
-      "patterns": [
-        {"name": "constant.numeric.número.decimal.portugues",    "match": "\\b([+-]?[\\d]+)\\b"                            },
+      "patterns": [        
         {"name": "constant.numeric.número.hexadecimal.portugues","match": "(\\$[a-fA-F\\d]+)"                              },
         {"name": "constant.numeric.número.misto.portugues",      "match": "\\b([+-]?[\\d]+\\+[+-]?[\\d]+/[+-]?[\\d]+)\\b"  },
         {"name": "constant.numeric.número.fracionário.portugues","match": "\\b([+-]?[\\d]+/[+-]?[\\d]+)\\b"                },
+        {"name": "constant.numeric.número.decimal.portugues",    "match": "\\b([+-]?[\\d]+)\\b"                            },
         {"name": "support.type.primitive.portugues",             "match": "(?i)\\b(byte|bytes|estrutura|estruturas)\\b"    },
         {"name": "constant.language.portugues",                  "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"}
       ]
