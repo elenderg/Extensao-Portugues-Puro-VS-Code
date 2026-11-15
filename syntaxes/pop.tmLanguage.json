@@ -195,7 +195,7 @@
     "pronomes": {"patterns": [{"name": "keyword.other.conjunções.portugues", "match": "\\b(algum|qual|tal|quanto)\\b"}]},
     "preposições": {
       "patterns": [
-        {"name": "keyword.other.preposições.portugues", "match": "\\b(acerca|ante|após|através|até|debaixo|dentre|dentro|desde|durante|em|entre|para|perante|por|sem|sob|sobre|versus|via)\\b|(\\b(a|de)\\b\\s+\\b(essa|essas|esse|esses|um|uma|umas|uns)\\b)"}
+        {"name": "keyword.control.preposições.portugues", "match": "\\b(acerca|ante|após|através|até|debaixo|dentre|dentro|desde|durante|em|entre|para|perante|por|sem|sob|sobre|versus|via)\\b|\\b(a|de)\\b(?=\\s+\\b(?:essa|essas|esse|esses|um|uma|umas|uns)\\b)"}
       ]
     },
     "adjetivos": {
