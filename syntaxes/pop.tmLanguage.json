@@ -3,16 +3,20 @@
   "name": "PoP",
   "scopeName": "source.escopo.portugues",
   "patterns": [
-    {"include": "#comentários"      },
-    {"include": "#strings-literais" },
-    {"include": "#valores-literais" },
-    {"include": "#rotinas-e-funções"},
-    {"include": "#palavras-chave"   },
-    {"include": "#tipos"            },
-    {"include": "#variáveis"        },
-    {"include": "#preposições"      },
-    {"include": "#conjunções"       },
-    {"include": "#outros"           }
+    {"include": "#comentários"       },
+    {"include": "#strings-literais"  },
+    {"include": "#valores-literais"  },
+    {"include": "#rotinas-e-funções" },
+    {"include": "#palavras-chave"    },
+    {"include": "#tipos"             },
+    {"include": "#variáveis"         },
+    {"include": "#conjunções"        },
+    {"include": "#verbos"            },
+    {"include": "#advérbios"         },
+    {"include": "#pronomes"          },
+    {"include": "#preposições"       },
+    {"include": "#adjetivos"         },
+    {"include": "#chamadas-de-rotina"}
   ],
   "repository": {
     "comentários": {
@@ -261,8 +265,7 @@
           "match": "(?<![A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#/])(?!(?:[0-9]+(?:/[0-9]+)?)(?![A-Za-zÀ-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#]))[A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#]+(?:/(?![0-9])[A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#]+)*"
         }
       ]
-    },
-    
+    },    
     "conjunções": {
       "patterns": [
         {
@@ -275,7 +278,7 @@
       "patterns": [
         {
           "name": "keyword.other.verbos.portugues",
-          "match": "\\b(cabe|começa|começando|começar|contendo|conter|contiver|contém|contêm|couber|dado|dada|dados|dadas|dando|deve|devem|deveria|deveriam|estamos|estar|estarem|estará|estarão|estava|estavam|estiver|estiver|estiverem|está|estão|excede|excedem|existe|existem|existir|finaliza|finalizar|foi|for|foram|forem|houver|há|inicia|iniciar|invoque|limitando-o|multiplicado|necessita|necessitar|obtendo|parece|partindo|partir|pode|podem|podemos|poderia|poderiam|possuem|possui|possui|possuir|puder|puderem|requer|resultando|retornando|seja|sejam|ser|será|serão|supera|superam|superar|são|tem|ter|termina|terminar|tiver|têm|ultrapassou|usando|é)\\b)"
+          "match": "\\b(cabe|começa|começando|começar|contendo|conter|contiver|contém|contêm|couber|dado|dada|dados|dadas|dando|deve|devem|deveria|deveriam|estamos|estar|estarem|estará|estarão|estava|estavam|estiver|estiver|estiverem|está|estão|excede|excedem|existe|existem|existir|finaliza|finalizar|foi|for|foram|forem|houver|há|inicia|iniciar|invoque|limitando-o|multiplicado|necessita|necessitar|obtendo|parece|partindo|partir|pode|podem|podemos|poderia|poderiam|possuem|possui|possui|possuir|puder|puderem|requer|resultando|retornando|seja|sejam|ser|será|serão|supera|superam|superar|são|tem|ter|termina|terminar|tiver|têm|ultrapassou|usando|é)\\b"
         }        
       ] 
     },
@@ -283,7 +286,7 @@
       "patterns": [
         {
           "name": "keyword.other.advérbios.portugues",
-          "match": "\\b(abaixo|acima|ainda|antes|aproximadamente|cerca|dentro|depois|deveras|então|junto|já|mais|menos|negativamente|perto|pouco|quão|regressivamente|somente|só|tanto|tão|vezes)\\b)"
+          "match": "\\b(abaixo|acima|ainda|antes|aproximadamente|cerca|dentro|depois|deveras|então|junto|já|mais|menos|negativamente|perto|pouco|quão|regressivamente|somente|só|tanto|tão|vezes)\\b"
         }        
       ] 
     },
@@ -291,7 +294,7 @@
       "patterns": [
         {
           "name": "keyword.other.conjunções.portugues",
-          "match": "\\b(algum|qual|tal|quanto)\\b)"
+          "match": "\\b(algum|qual|tal|quanto)\\b"
         }        
       ] 
     },
@@ -307,7 +310,15 @@
       "patterns": [
         {
           "name": "keyword.other.conjunções.portugues",
-          "match": "\\b(comprida|comprido|igual|menores|negativo|parecida|parecido|relativa|semelhante|similar|voltada|voltado)\\b)"
+          "match": "\\b(comprida|comprido|igual|menores|negativo|parecida|parecido|relativa|semelhante|similar|voltada|voltado)\\b"
+        }               
+      ] 
+    },
+    "chamadas-de-rotina": {
+      "patterns": [
+        {
+          "name": "entity.name.function.invocation.procedure.portugues",
+          "match": "[A-ZÀ-ß][A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µŠŒŽ\\-\\#\/]*?\\s*[A-Za-zÀ-ÿ_\\'\\&\\@\\ƒŠŒŽœžŸ£µ\\d\\-\\#\/ ]*?"
         }        
       ] 
     }
