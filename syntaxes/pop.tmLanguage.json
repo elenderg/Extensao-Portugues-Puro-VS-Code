@@ -77,7 +77,7 @@
         {
           "name": "comment.qualificador.portugues",
           "begin": "\\(",
-          "beginCaptures": {"0": {"name": "comment.qualificador.portugues"              }},
+          "beginCaptures": {"0": {"name": "punctuation.definition.comment.begin.portugues"              }},
           "end": "\\)",
           "endCaptures":   {"0": {"name": "punctuation.definition.comment.end.portugues"}}
         },
@@ -102,7 +102,7 @@
         {
           "name": "comment.qualificador.portugues",
           "begin": "\\(",
-          "beginCaptures": {"0": {"name": "comment.qualificador.portugues"              }},
+          "beginCaptures": {"0": {"name": "punctuation.definition.comment.begin.portugues"              }},
           "end": "\\)",
           "endCaptures":   {"0": {"name": "punctuation.definition.comment.end.portugues"}}
         },
