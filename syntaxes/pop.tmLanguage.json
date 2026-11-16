@@ -19,6 +19,7 @@
     {"include": "#preposições"            },
     {"include": "#adjetivos"              },
     {"include": "#observações"            },
+    {"include": "qualificadores"          },
     {"include": "#chamadas-de-rotina"     }
   ],
   "repository": {
@@ -73,14 +74,8 @@
         {"include": "#denominacao-de-campos"},
         {"include": "#operadores"           },
         {"include": "#strings-literais"     },
-        {"include":"#observações"           },        
-        {
-          "name": "comment.qualificador.portugues",
-          "begin": "\\(",
-          "beginCaptures": {"0": {"name": "punctuation.definition.comment.begin.portugues"              }},
-          "end": "\\)",
-          "endCaptures":   {"0": {"name": "punctuation.definition.comment.end.portugues"}}
-        },
+        {"include":"#observações"           },   
+        {"include":"#qualificadores"        },
         {"name": "support.type.simples.portugues", "match": "[A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#\\/]+"}
       ]
     },
@@ -99,13 +94,7 @@
         {"include": "#operadores"           },
         {"include": "#strings-literais"     },
         {"include":"#observações"           },
-        {
-          "name": "comment.qualificador.portugues",
-          "begin": "\\(",
-          "beginCaptures": {"0": {"name": "punctuation.definition.comment.begin.portugues"              }},
-          "end": "\\)",
-          "endCaptures":   {"0": {"name": "punctuation.definition.comment.end.portugues"}}
-        },
+        {"include":"#qualificadores"        },
         {"name": "support.type.simples.portugues", "match": "[A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#\\/]+"}
       ]
     },
@@ -128,13 +117,7 @@
         {"name": "constant.numeric.número.fracionário.portugues","match": "\\b([+-]?[\\d]+/[+-]?[\\d]+)\\b"                },
         {"name": "constant.language.portugues",                  "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"},
         {"include":"#observações"                                                                                          },
-        {
-          "name": "comment.qualificador.portugues",
-          "begin": "\\(",
-          "beginCaptures": {"0": {"name": "punctuation.definition.comment.begin.portugues"}},
-          "end": "\\)",
-          "endCaptures":   {"0": {"name": "punctuation.definition.comment.end.portugues"  }}
-        },
+        {"include":"#qualificadores"                                                                                       },
         {
           "name": "variable.other.portugues", 
           "match": "(?<![A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#/])(?!(?:[0-9]+(?:/[0-9]+)?)(?![A-Za-zÀ-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#]))[A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#]+(?:/(?![0-9])[A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#]+)*"
@@ -189,6 +172,17 @@
           "begin": "\\[",
           "beginCaptures": {"0": {"name": "punctuation.definition.comment.begin.portugues"}},
           "end": "\\]",
+          "endCaptures":   {"0": {"name": "punctuation.definition.comment.end.portugues"  }}
+        }
+      ]
+    },
+    "qualificadores": {
+      "patterns": [
+        {
+          "name": "comment.qualificador.portugues",
+          "begin": "\\(",
+          "beginCaptures": {"0": {"name": "punctuation.definition.comment.begin.portugues"}},
+          "end": "\\)",
           "endCaptures":   {"0": {"name": "punctuation.definition.comment.end.portugues"  }}
         }
       ]
