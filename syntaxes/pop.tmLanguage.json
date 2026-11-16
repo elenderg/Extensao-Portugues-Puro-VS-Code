@@ -18,7 +18,7 @@
     {"include": "#pronomes"               },
     {"include": "#preposições"            },
     {"include": "#adjetivos"              },
-    {"include":"#comentário-de-observação"},
+    {"include":"#observação"              },
     {"include": "#chamadas-de-rotina"     }
   ],
   "repository": {
@@ -52,7 +52,7 @@
       "beginCaptures": {"1": {"name": "keyword.language.iniciadores.portugues"}},
       "end": "(?=(?i:\\b(?:e|sob)\\b|,|\\.|\\r?\\n))",
       "patterns": [
-        {"include":"#comentário-de-observação"},
+        {"include":"#observação"},
         {
           "name": "variable.other.property.portugues",
           "match": "[A-Z0-9a-zÀ-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#\\/]+(?:[ \\t]+(?![Ss][Oo][Bb]\\b)[A-Z0-9a-zÀ-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#\\/]+)*"
@@ -73,7 +73,7 @@
         {"include": "#denominacao-de-campos"},
         {"include": "#operadores"           },
         {"include": "#strings-literais"     },
-        {"include":"#comentário-de-observação"},        
+        {"include":"#observação"            },        
         {
           "name": "comment.qualificador.portugues",
           "begin": "\\(",
@@ -98,7 +98,7 @@
         {"include": "#denominacao-de-campos"},
         {"include": "#operadores"           },
         {"include": "#strings-literais"     },
-        {"include":"#comentário-de-observação"},
+        {"include":"#observação"            },
         {
           "name": "comment.qualificador.portugues",
           "begin": "\\(",
@@ -127,7 +127,7 @@
         {"name": "constant.numeric.número.misto.portugues",      "match": "\\b([+-]?[\\d]+\\+[+-]?[\\d]+/[+-]?[\\d]+)\\b"  },
         {"name": "constant.numeric.número.fracionário.portugues","match": "\\b([+-]?[\\d]+/[+-]?[\\d]+)\\b"                },
         {"name": "constant.language.portugues",                  "match": "\\b(?i:(sim|não|nulo|inexistente|em branco))\\b"},
-        {"include":"#comentário-de-observação"},
+        {"include":"#observação"                                                                                           },
         {
           "name": "comment.qualificador.portugues",
           "begin": "\\(",
@@ -182,7 +182,7 @@
         }
       ]
     },
-    "comentário-de-observação": {
+    "observação": {
       "patterns": [
         {
           "name": "comment.observação.portugues",
