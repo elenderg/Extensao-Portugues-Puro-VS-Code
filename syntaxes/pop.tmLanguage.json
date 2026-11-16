@@ -51,12 +51,12 @@
       "name": "meta.variable.declaration.field.portugues",
       "begin": "(?i)\\b(chamado|chamada|chamados|chamadas|denominado|denominada|denominados|denominadas)\\b(?=\\s)",
       "beginCaptures": {"1": {"name": "keyword.language.iniciadores.portugues"}},
-      "end": "(?=(?i:\\b(?:e|sob)\\b|,|\\.|\\r?\\n))",
+      "end": "(?=(?i:\\b(?:e|sob|ou)\\b|,|\\.|\\r?\\n))",
       "patterns": [
         {"include":"#observações"},
         {
-          "name": "variable.other.property.portugues",
-          "match": "[A-Z0-9a-zÀ-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#\\/]+(?:[ \\t]+(?![Ss][Oo][Bb]\\b)[A-Z0-9a-zÀ-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#\\/]+)*"
+          "name":  "variable.other.property.portugues",
+          "match": "(?i)[A-Z0-9a-zÀ-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#\\/]+(?:[ \\t]+(?!(?:e|sob|ou)\\b)[A-Z0-9a-zÀ-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#\\/]+)*"
         }
       ]
     },
