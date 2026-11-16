@@ -56,7 +56,7 @@
           "begin": "\\[",
           "beginCaptures": {"0": {"name": "punctuation.definition.comment.begin.portugues"}},
           "end": "\\]",
-          "endCaptures": {"0":   {"name": "punctuation.definition.comment.end.portugues"  }}
+          "endCaptures":   {"0": {"name": "punctuation.definition.comment.end.portugues"  }}
         },
         {
           "name": "variable.other.property.portugues",
@@ -83,14 +83,14 @@
           "begin": "\\[",
           "beginCaptures": {"0": {"name": "punctuation.definition.comment.begin.portugues"}},
           "end": "\\]",
-          "endCaptures": {"0":   {"name": "punctuation.definition.comment.end.portugues"  }}
+          "endCaptures":   {"0": {"name": "punctuation.definition.comment.end.portugues"  }}
         },
         {
           "name": "comment.qualificador.portugues",
           "begin": "\\(",
           "beginCaptures": {"0": {"name": "comment.qualificador.portugues"              }},
           "end": "\\)",
-          "endCaptures": {"0":   {"name": "punctuation.definition.comment.end.portugues"}}
+          "endCaptures":   {"0": {"name": "punctuation.definition.comment.end.portugues"}}
         },
         {"name": "support.type.simples.portugues", "match": "[A-Za-z0-9À-ÿ_\\-'&@ƒŠŒŽœžŸ£µ#\\/]+"}
       ]
@@ -114,7 +114,7 @@
           "begin": "\\[",
           "beginCaptures": {"0": {"name": "punctuation.definition.comment.begin.portugues"}},
           "end": "\\]",
-          "endCaptures": {"0":   {"name": "punctuation.definition.comment.end.portugues"  }}
+          "endCaptures":   {"0": {"name": "punctuation.definition.comment.end.portugues"  }}
         },
         {
           "name": "comment.qualificador.portugues",
