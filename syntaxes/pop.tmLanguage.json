@@ -20,7 +20,7 @@
     , { "include": "#preposições"        }
     , { "include": "#adjetivos"          }
     , { "include": "#observações"        }
-    , { "include": "qualificadores"      }
+    , { "include": "#qualificadores"     }
     , { "include": "#chamadas-de-rotina" }
   ]
   , "repository": {
@@ -28,8 +28,7 @@
     {
       "patterns": 
       [
-          { "match": "(\\[.*?\\])", "name": "comment.block.observação.pop"     }
-        , { "match": "\\\\(.*)",    "name": "comment.line.character.linha.pop" }
+          { "match": "\\\\(.*)",    "name": "comment.line.character.linha.pop" }
         , { "match": "(\\(.*?\\))", "name": "comment.qualificador.pop"         }
       ]
     }
