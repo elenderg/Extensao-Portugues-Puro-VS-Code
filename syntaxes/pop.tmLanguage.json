@@ -2,7 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json"
   , "name": "Português Puro"
   , "scopeName": "source.escopo.pop"
-  , "patterns": [
+  , "patterns": 
+  [
       { "include": "#comentários"        }
     , { "include": "#strings-literais"   }
     , { "include": "#rotinas-e-funções"  }
@@ -23,7 +24,8 @@
     , { "include": "#qualificadores"     }
     , { "include": "#chamadas-de-rotina" }
   ]
-  , "repository": {
+  , "repository": 
+  {
     "comentários": 
     {
       "patterns": 
@@ -90,11 +92,11 @@
       }
       , "patterns": 
       [
-        { "include": "#denominacao-de-campos" }
-        , { "include": "#operadores"          }
-        , { "include": "#strings-literais"    }
-        , { "include": "#observações"         }
-        , { "include": "#qualificadores"      }
+          { "include": "#denominacao-de-campos" }
+        , { "include": "#operadores"            }
+        , { "include": "#strings-literais"      }
+        , { "include": "#observações"           }
+        , { "include": "#qualificadores"        }
         , {
             "name": "support.type.simples.pop"
           , "match": "(?:[A-Za-z0-9À-ÖØ-öø-ÿ€‚ƒ„…†‡ˆ‰Š‹ŒŽ‘’“”•–—˜™š›œžŸ¡¢¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿×÷])+"
