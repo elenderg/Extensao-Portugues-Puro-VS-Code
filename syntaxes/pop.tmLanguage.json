@@ -43,8 +43,6 @@
         , { "name": "constant.numeric.número.misto.pop",       "match": "([+-]?[\\d]+\\+[+-]?[\\d]+/[+-]?[\\d]+)"        }
         , { "name": "constant.numeric.número.fracionário.pop", "match": "([+-]?[\\d]+/[+-]?[\\d]+)"                      }
         , { "name": "constant.numeric.número.decimal.pop",     "match": "([+-]?[\\d]+)"                                  }
-        , { "name": "support.type.primitive.pop",              "match": "(?i)\\b(byte|bytes|estrutura|estruturas)\\b"                                         }
-        , { "name": "constant.language.pop",                   "match": "(?i)\\b(sim|não|nulo|inexistente|em branco|nula|nulos|nulas|inexistentes|zerado)\\b" }
       ]
     }
     , "outros-literais": 
@@ -59,8 +57,8 @@
     {
       "patterns": 
       [
-          { "name": "storage.type.function.Função-booleana.pop", "match": "(?i(Função\\s+)?(para\\s+que\\s+se)(\\s+determine\\s+se\\s)" }
-        , { "name": "storage.type.function.Rotina.pop",          "match": "(?i(Rotina\\s+)?(para\\s+que\\s+se\\s)"                      }
+          { "name": "storage.type.function.Função-booleana.pop", "match": "(?i)(Função\\s+)?(para\\s+que\\s+se)(\\s+determine\\s+se\\s)" }
+        , { "name": "storage.type.function.Rotina.pop",          "match": "(?i)(Rotina\\s+)?(para\\s+que\\s+se\\s)"                      }
       ]
     }
     , "denominacao-de-campos": 
