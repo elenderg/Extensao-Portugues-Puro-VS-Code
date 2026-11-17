@@ -38,10 +38,10 @@
     {
       "patterns": 
       [
-          { "name": "constant.numeric.número.hexadecimal.pop", "match": "(\\$[a-fA-F\\d]+)"                              }
-        , { "name": "constant.numeric.número.misto.pop",       "match": "([+-]?[\\d]+\\+[+-]?[\\d]+/[+-]?[\\d]+)"        }
-        , { "name": "constant.numeric.número.fracionário.pop", "match": "([+-]?[\\d]+/[+-]?[\\d]+)"                      }
-        , { "name": "constant.numeric.número.decimal.pop",     "match": "([+-]?[\\d]+)"                                  }
+          { "name": "constant.numeric.número.hexadecimal.pop", "match": "(\\$[a-fA-F0-9]+)"                              }
+        , { "name": "constant.numeric.número.misto.pop",       "match": "([+-]?[0-9]+\\+[+-]?[0-9]+/[+-]?[0-9]+)"        }
+        , { "name": "constant.numeric.número.fracionário.pop", "match": "([+-]?[0-9]+/[+-]?[0-9]+)"                      }
+        , { "name": "constant.numeric.número.decimal.pop",     "match": "([+-]?[0-9]+)"                                  }
       ]
     }
     , "outros-literais": 
@@ -103,7 +103,7 @@
     , "tipos-escalares": 
     {
         "name": "meta.type.declaration.tipo.escalar.pop"
-      , "begin": "(([+-]?[\\d]+\\+[+-]?[\\d]+/[+-]?[\\d]+)|([+-]?[\\d]+/[+-]?[\\d]+|([+-]?[\\d]+)))(?=\\s)"
+      , "begin": "(([+-]?[0-9]+\\+[+-]?[0-9]+/[+-]?[0-9]+)|([+-]?[0-9]+/[+-]?[0-9]+|([+-]?[0-9]+)))(?=\\s)"
       , "beginCaptures": { "1": { "name": "constant.numeric.número.escalar.pop" } }
       , "end": "(?i)(?=(acompanhado\\s+de|dividido\\s+por|juntamente\\s+com|junto\\s+com|multiplicado\\s+por|seguido\\s+de|seguida\\s+de)|(\\b(a|à|abaixo|acerca|acima|ainda|algum|ante|antes|ao|aos|aproximadamente|após|as|às|através|até|cabe|cerca|chamada|chamadas|chamado|chamados|com|começa|começando|começar|como|comprida|comprido|contendo|conter|contiver|contém|contêm|couber|dada|dadas|dado|dados|dando|debaixo|dentre|dentro|depois|desde|dessa|dessas|desse|desses|desta|destas|deste|destes|deve|devem|deveras|deveria|deveriam|dum|duma|dumas|duns|durante|e|é|em|enquanto|entre|então|essa|essas|esse|esses|esta|estamos|estar|estarem|estará|estarão|estas|estava|estavam|este|estes|estiver|estiverem|está|estão|excede|excedem|existe|existem|existir|finaliza|finalizar|foi|for|foram|forem|houver|há|igual|inicia|iniciar|invoque|já|limitando-o|mais|menores|menos|na|nas|necessita|necessitar|negativamente|negativo|nem|nessa|nessas|nesse|nesses|nesta|nestas|neste|nestes|no|nos|num|numa|numas|nuns|não|o|obtendo|os|ou|para|parece|parecida|parecido|partindo|partir|pela|pelas|pelo|pelos|perante|perto|pode|podem|podemos|poderia|por|possuem|possui|possuir|pouco|puder|puderem|qual|quanto|quão|regressivamente|relativa|requer|resultando|retornando|seja|sejam|sem|semelhante|ser|será|serão|similar|sob|sobre|somente|supera|superam|superar|são|só|tal|tanto|tem|ter|termina|terminar|tiver|tão|têm|ultrapassou|um|uma|umas|uns|usando|versus|vezes|via|voltada|voltado)\\b)|\\\\|\\:|\\.|\\,|\\;|(\\bde\\b\\s+(essa|essas|esse|esses|um|uma|umas|uns)))"
       , "endCaptures": 
