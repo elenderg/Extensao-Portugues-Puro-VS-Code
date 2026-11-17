@@ -4,7 +4,7 @@
   , "scopeName": "source.escopo.pop"
   , "patterns": 
   [
-      { "include": "#comentários"        }
+      { "include": "#comentário-de-linha"}
     , { "include": "#strings-literais"   }
     , { "include": "#rotinas-e-funções"  }
     , { "include": "#palavras-chave"     }
@@ -26,7 +26,7 @@
   ]
   , "repository": 
   {
-    "comentários": 
+    "comentário-de-linha": 
     {
       "patterns": 
       [
