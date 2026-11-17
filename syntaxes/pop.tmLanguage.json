@@ -30,8 +30,7 @@
     {
       "patterns": 
       [
-          { "match": "\\\\(.*)",    "name": "comment.line.character.linha.pop" }
-        , { "match": "(\\(.*?\\))", "name": "comment.qualificador.pop"         }
+          { "match": "\\\\(.*)",    "name": "comment.line.character.linha.pop" }        
       ]
     }
     , "strings-literais": { "patterns": [{ "name": "string.quoted.double.pop", "begin": "\"", "end": "\"" }] }
