@@ -2,10 +2,10 @@
   "name": "portugues-puro",
   "displayName": "Português Puro",
   "description": "Realçador de sintaxe para a Linguagem de Programação \"Português Puro\".",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "publisher": "OsmosianOrderofPlainEnglishProgrammers",
   "engines": {
-    "vscode": "^1.85.0"
+    "vscode": "^1.70.0"
   },
   "repository": {
     "type": "git",
@@ -38,5 +38,6 @@
   },
   "devDependencies": {
     "js-yaml": "^4.1.0"
-  }
+  },
+  "icon": "portugues-puro-icon-128.png"
 }

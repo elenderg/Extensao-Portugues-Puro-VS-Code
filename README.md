@@ -1,6 +1,6 @@
 # Realçador de sintaxe para a Linguagem de programação "Português Puro" para o Visual Studio Code
 
-[Logotipo](logo.jpeg)
+[[<img src="logo.png" width="500"/>]](logo.png)
 
 ## Descrição
 
