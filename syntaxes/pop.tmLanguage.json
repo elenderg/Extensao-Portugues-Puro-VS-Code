@@ -65,7 +65,7 @@
       "name": "meta.variable.declaration.field.pop"
       , "begin": "(?i)\\b(chamado|chamada|chamados|chamadas|denominado|denominada|denominados|denominadas)\\b(?=\\s)"
       , "beginCaptures": { "1": { "name": "keyword.language.iniciadores.pop" } }
-      , "end": "(?=(?i:\\b(?:e|sob|ou)\\b|,|\\.|\\r?\\n))"
+      , "end": "(?=(?i:\\b(?:e|sob|ou)\\b|,|\\.))"
       , "patterns": 
       [
           { "include": "#observações" }
