@@ -59,8 +59,8 @@
     {
       "patterns": 
       [
-          { "name": "storage.type.function.Função-booleana.pop", "match": "(Função\\s+)?(para\\s+que\\s+se)(\\s+determine\\s+se\\s)" }
-        , { "name": "storage.type.function.Rotina.pop",          "match": "(Rotina\\s+)?(para\\s+que\\s+se\\s)"                      }
+          { "name": "storage.type.function.Função-booleana.pop", "match": "(?i(Função\\s+)?(para\\s+que\\s+se)(\\s+determine\\s+se\\s)" }
+        , { "name": "storage.type.function.Rotina.pop",          "match": "(?i(Rotina\\s+)?(para\\s+que\\s+se\\s)"                      }
       ]
     }
     , "denominacao-de-campos": 
