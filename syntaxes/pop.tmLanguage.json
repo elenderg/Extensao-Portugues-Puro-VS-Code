@@ -12,6 +12,7 @@
     , { "include": "#tipos-escalares"    }
     , { "include": "#variáveis"          }
     , { "include": "#valores-literais"   }
+    , { "include": "#outros-literais"    }
     , { "include": "#conjunções"         }
     , { "include": "#verbos"             }
     , { "include": "#advérbios"          }
@@ -41,8 +42,16 @@
         , { "name": "constant.numeric.número.misto.pop",       "match": "([+-]?[\\d]+\\+[+-]?[\\d]+/[+-]?[\\d]+)"        }
         , { "name": "constant.numeric.número.fracionário.pop", "match": "([+-]?[\\d]+/[+-]?[\\d]+)"                      }
         , { "name": "constant.numeric.número.decimal.pop",     "match": "([+-]?[\\d]+)"                                  }
-        , { "name": "support.type.primitive.pop",              "match": "(?i)\\b(byte|bytes|estrutura|estruturas)\\b"    }
-        , { "name": "constant.language.pop",                   "match": "(?i)\\b(sim|não|nulo|inexistente|em branco)\\b" }
+        , { "name": "support.type.primitive.pop",              "match": "(?i)\\b(byte|bytes|estrutura|estruturas)\\b"                                         }
+        , { "name": "constant.language.pop",                   "match": "(?i)\\b(sim|não|nulo|inexistente|em branco|nula|nulos|nulas|inexistentes|zerado)\\b" }
+      ]
+    }
+    , "outros-literais": 
+    {
+      "patterns": 
+      [
+          { "name": "support.type.primitive.pop", "match": "(?i)\\b(byte|bytes|estrutura|estruturas)\\b"                                         }
+        , { "name": "constant.language.pop",      "match": "(?i)\\b(sim|não|nulo|inexistente|em branco|nula|nulos|nulas|inexistentes|zerado)\\b" }
       ]
     }
     , "rotinas-e-funções": 
@@ -132,15 +141,12 @@
       }
       , "patterns": 
       [
-          { "include": "#operadores"                                                                                        }
-        , { "include": "#strings-literais"                                                                                  }
-        , { "name":    "constant.numeric.número.hexadecimal.pop", "match": "(\\$[a-fA-F\\d]+)"                              }
-        , { "name":    "constant.numeric.número.misto.pop",       "match": "([+-]?[\\d]+\\+[+-]?[\\d]+/[+-]?[\\d]+)"        }
-        , { "name":    "constant.numeric.número.fracionário.pop", "match": "([+-]?[\\d]+/[+-]?[\\d]+)"                      }
-        , { "name":    "constant.numeric.número.decimal.pop",     "match": "([+-]?[\\d]+)"                                  }
-        , { "name":    "constant.language.pop",                   "match": "(?i)\\b(sim|não|nulo|inexistente|em branco)\\b" }
-        , { "include": "#observações"                                                                                       }
-        , { "include": "#qualificadores"                                                                                    }
+          { "include": "#operadores"       }
+        , { "include": "#strings-literais" }
+        , { "include": "#valores-literais" }
+        , { "include": "#outros-literais"  }        
+        , { "include": "#observações"      }
+        , { "include": "#qualificadores"   }
         , {
             "name": "variable.other.pop"
           , "match": "(?<![A-Za-z0-9À-ÖØ-öø-ÿ€‚ƒ„…†‡ˆ‰Š‹ŒŽ‘’“”•–—˜™š›œžŸ¡¢¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿×÷])(?!(?:[-+]?[0-9]+(?:/[0-9]+)?)(?![A-Za-z0-9À-ÖØ-öø-ÿ€‚ƒ„…†‡ˆ‰Š‹ŒŽ‘’“”•–—˜™š›œžŸ¡¢¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿×÷]))[A-Za-z0-9À-ÖØ-öø-ÿ€‚ƒ„…†‡ˆ‰Š‹ŒŽ‘’“”•–—˜™š›œžŸ¡¢¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿×÷]+"
